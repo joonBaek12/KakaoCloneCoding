@@ -88,6 +88,7 @@ extension TabBarViewController {
         
         let tabBar: UITabBar = self.tabBar
         tabBar.backgroundColor = .white
+        tabBar.tintColor = .black
         
         let images = [
             "friendTabIcon",
