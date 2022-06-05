@@ -25,7 +25,7 @@ final class FirstViewController: UIViewController {
     
     private let subtitleLabel = UILabel().then {
         $0.text = "사용하던 카카오계정이 있다면\n이메일 또는 전화번호로 로그인해 주세요."
-        $0.font = .systemFont(ofSize: 10, weight: .medium)
+        $0.font = .systemFont(ofSize: 12, weight: .medium)
         $0.textAlignment = .center
         $0.numberOfLines = 2
     }
@@ -172,9 +172,9 @@ extension FirstViewController{
     private func touchupLoginButton() {
         let secondVC = SecondViewController()
 
-        if let emailString = emailTextField.text {
-            secondVC.dataBind(email: emailString)
-        }
+//        if let emailString = emailTextField.text {
+//            secondVC.dataBind(email: emailString)
+//        }
         self.navigationController?.navigationBar.isHidden = true//'<back버튼' 가리기
         self.navigationController?.pushViewController(secondVC, animated: true)
     }
@@ -183,9 +183,9 @@ extension FirstViewController{
     private func touchupSignupButton() {
         let secondVC = SecondViewController()
         
-        if let emailString = emailTextField.text {
-            secondVC.dataBind(email: emailString)
-        }
+//        if let emailString = emailTextField.text {
+//            secondVC.dataBind(email: emailString)
+//        }
         
         self.modalPresentationStyle = .automatic
         

@@ -64,11 +64,11 @@ extension TabBarViewController {
   
     //각 TabBar에 ViewController 타이틀 설정
 
-        vc1.title = "친구"
-        vc2.title = "채팅"
-        vc3.title = "뷰"
-        vc4.title = "쇼핑"
-        vc5.title = "더보기"
+        vc1.title = ""
+        vc2.title = ""
+        vc3.title = ""
+        vc4.title = ""
+        vc5.title = ""
 
 
     //navigationController의 root view 설정

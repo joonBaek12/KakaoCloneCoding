@@ -30,7 +30,7 @@ final class MyTabViewController: UIViewController {
     
     private let myNameLabel = UILabel().then {
         $0.text = "백준"
-        $0.font = .systemFont(ofSize: 20, weight: .medium)
+        $0.font = .systemFont(ofSize: 18, weight: .regular)
         $0.textColor = .white
     }
     
@@ -75,9 +75,10 @@ extension MyTabViewController {
         view.adds([closeButton, profileImageView, myNameLabel, profileLineView,editButton,kakaoStoryButton,chattingButton])
         
         closeButton.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(30)
-            $0.leading.equalToSuperview().offset(20)
-            $0.width.height.equalTo(20)
+            $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(14)
+            $0.leading.equalToSuperview().offset(18)
+            $0.width.equalTo(13)
+            $0.height.equalTo(14)
         }
         
         profileImageView.snp.makeConstraints {
@@ -89,12 +90,12 @@ extension MyTabViewController {
         
         myNameLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(self.profileImageView.snp.bottom).offset(10)
+            $0.top.equalTo(self.profileImageView.snp.bottom).offset(8)
         }
         
         profileLineView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(self.myNameLabel.snp.bottom).offset(10)
+            $0.top.equalTo(self.myNameLabel.snp.bottom).offset(42)
             $0.width.equalTo(self.view.safeAreaLayoutGuide)
             $0.height.equalTo(1)
         }

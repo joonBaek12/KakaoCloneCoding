@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ShoppingViewController: UITabBarController {
+class ShoppingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

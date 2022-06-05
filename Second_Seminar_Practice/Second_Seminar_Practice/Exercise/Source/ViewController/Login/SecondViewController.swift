@@ -18,18 +18,58 @@ final class SecondViewController: UIViewController {
     
     
     //MARK: - UIComponents
-    
-    private let emailLabel = UILabel().then {
+    private let titleLabel = UILabel().then {
+        $0.text = "카카오톡을 시작합니다"
         $0.font = .systemFont(ofSize: 17, weight: .medium)
     }
     
-    private let backButton = UIButton().then {
-        $0.setTitle("뒤로가기", for: .normal)
+    private let subtitleLabel = UILabel().then {
+        $0.text = "사용하던 카카오계정이 있다면\n이메일 또는 전화번호로 로그인해 주세요."
+        $0.font = .systemFont(ofSize: 12, weight: .medium)
+        $0.textAlignment = .center
+        $0.numberOfLines = 2
+    }
+    
+    private let emailTextField = UITextField().then {
+        $0.font = UIFont.systemFont(ofSize: 10, weight: .bold)
+        $0.textColor = .black
+        $0.placeholder = "이메일 또는 전화번호"
+        $0.autocorrectionType = .no
+        $0.autocapitalizationType = .none
+        $0.keyboardType = .emailAddress
+    }
+    
+    private let emailLineView = UIView().then {
+        $0.backgroundColor = .gray
+    }
+    
+    private let passwordTextField = UITextField().then {
+        $0.font = UIFont.systemFont(ofSize: 10, weight: .bold)
+        $0.textColor = .black
+        $0.placeholder = "비밀번호"
+    }
+    
+    private let passwordLineView = UIView().then {
+        $0.backgroundColor = .gray
+    }
+    
+    private let passwordConfirmTextField = UITextField().then {
+        $0.font = UIFont.systemFont(ofSize: 10, weight: .bold)
+        $0.textColor = .black
+        $0.placeholder = "비밀번호 확인"
+    }
+    
+    private let passwordConfirmLineView = UIView().then {
+        $0.backgroundColor = .gray
+    }
+    
+    private let signupButton = UIButton().then {
+        $0.setTitle("새로운 카카오 계정 만들기", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 10, weight: .black)
-        $0.addTarget(self, action: #selector(touchupBackButton), for: .touchUpInside)
+        $0.backgroundColor = .gray
+        $0.addTarget(self, action: #selector(touchupSignupButton), for: .touchUpInside)
     }
-
     
     //MARK: - Variables
     
@@ -38,45 +78,113 @@ final class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         layout()
+        view.backgroundColor = .white
+        
+        
     }
+    
+    
+    
 }
 
 //MARK: - Extentions
 
-extension SecondViewController {
+extension SecondViewController{
     
     //MARK: - LayoutHelpers
     
-    private func layout() { view.adds([emailLabel,backButton])
+    private func layout() {
         
-        emailLabel.snp.makeConstraints {
-            $0.center.equalToSuperview()//xy통합
-        }
-            
-        backButton.snp.makeConstraints {
+        view.adds(
+            [
+                titleLabel,
+                subtitleLabel,
+                emailTextField,
+                emailLineView,
+                passwordTextField,
+                passwordLineView,
+                passwordConfirmTextField,
+                passwordConfirmLineView,
+                signupButton
+            ]
+        )
+        
+        titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(self.emailLabel.snp.bottom).offset(15)
-            $0.width.equalTo(40)
-            $0.height.equalTo(20)
+            $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(62)
         }
-      
-
         
+        subtitleLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(self.titleLabel.snp.bottom).offset(29)
+        }
+        
+        emailTextField.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.leading.equalTo(self.view.safeAreaLayoutGuide).offset(30)
+            $0.top.equalTo(self.subtitleLabel.snp.bottom).offset(93)
+            $0.height.equalTo(40)
+        }
+        
+        emailLineView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.leading.equalTo(self.emailTextField)
+            $0.top.equalTo(self.emailTextField.snp.bottom)
+            $0.height.equalTo(1)
+        }
+        
+        passwordTextField.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.leading.equalTo(self.emailTextField)
+            $0.top.equalTo(self.emailTextField.snp.bottom).offset(12)
+            $0.height.equalTo(40)
+        }
+        
+        passwordLineView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.leading.equalTo(self.emailTextField)
+            $0.top.equalTo(self.passwordTextField.snp.bottom)
+            $0.height.equalTo(1)
+        }
+        
+        passwordConfirmTextField.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.leading.equalTo(self.emailTextField)
+            $0.top.equalTo(self.passwordTextField.snp.bottom).offset(12)
+            $0.height.equalTo(40)
+        }
+        
+        passwordConfirmLineView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.leading.equalTo(self.emailTextField)
+            $0.top.equalTo(self.passwordConfirmTextField.snp.bottom)
+            $0.height.equalTo(1)
+        }
+        
+        signupButton.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.leading.equalTo(self.emailTextField)
+            $0.top.equalTo(self.passwordConfirmTextField.snp.bottom).offset(36)
+            $0.height.equalTo(40)
+        }
     }
     
-    //MARK: - GeneralHelpers
-
-    func dataBind(email: String) {
-        emailLabel.text = email
-    }
-    
-    //MARK: - ActionHelpers
+    // MARK: - GeneralHelpers
+        
+    // MARK: - ActionHelpers
     
     @objc
-    private func touchupBackButton() {
-        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
+    private func touchupSignupButton() {
+        let secondVC = SecondViewController()
+        
+//        if let emailString = emailTextField.text {
+//            secondVC.dataBind(email: emailString)
+//        }
+        
+        self.modalPresentationStyle = .automatic
+        
+        self.present(secondVC, animated: true, completion: nil)
+        
     }
 }

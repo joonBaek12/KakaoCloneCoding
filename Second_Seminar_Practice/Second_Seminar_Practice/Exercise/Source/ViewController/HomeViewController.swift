@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     
     private let friendLabel = UILabel().then {
         $0.text = "친구"
-        $0.font = .systemFont(ofSize: 28, weight: .bold)
+        $0.font = .systemFont(ofSize: 22, weight: .semibold)
         $0.textColor = .black
     }
     
@@ -79,18 +79,15 @@ extension HomeViewController {
         )
         
         friendLabel.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(20)
-            $0.leading.equalTo(self.view.safeAreaLayoutGuide).offset(20)
+            $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(15)
+            $0.leading.equalTo(self.view.safeAreaLayoutGuide).offset(14)
         }
-        
-        //    profileImageContainerView.snp.makeConstraints {
-        //        $0.top.equalTo(self.friendLabel.snp.bottom).offset(20)
-        //        $0.leading.equalTo(self.friendLabel.snp.leading)
-        //    }
         
         profileMainImageView.snp.makeConstraints {
             $0.top.equalTo(self.friendLabel.snp.bottom).offset(20)
             $0.leading.equalTo(self.friendLabel.snp.leading)
+            $0.width.equalTo(59)
+            $0.height.equalTo(58)
         }
         
         profileButton.snp.makeConstraints {
