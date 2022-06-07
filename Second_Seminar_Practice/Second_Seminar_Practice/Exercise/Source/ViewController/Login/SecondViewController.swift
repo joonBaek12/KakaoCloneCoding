@@ -37,6 +37,7 @@ final class SecondViewController: UIViewController {
         $0.autocorrectionType = .no
         $0.autocapitalizationType = .none
         $0.keyboardType = .emailAddress
+        $0.clearButtonMode = .whileEditing
     }
     
     private let emailLineView = UIView().then {
@@ -47,6 +48,7 @@ final class SecondViewController: UIViewController {
         $0.font = UIFont.systemFont(ofSize: 10, weight: .bold)
         $0.textColor = .black
         $0.placeholder = "비밀번호"
+        $0.clearButtonMode = .whileEditing
     }
     
     private let passwordLineView = UIView().then {
@@ -57,6 +59,7 @@ final class SecondViewController: UIViewController {
         $0.font = UIFont.systemFont(ofSize: 10, weight: .bold)
         $0.textColor = .black
         $0.placeholder = "비밀번호 확인"
+        $0.clearButtonMode = .whileEditing
     }
     
     private let passwordConfirmLineView = UIView().then {
@@ -80,8 +83,6 @@ final class SecondViewController: UIViewController {
         super.viewDidLoad()
         layout()
         view.backgroundColor = .white
-        
-        
     }
     
     
@@ -176,15 +177,9 @@ extension SecondViewController{
     
     @objc
     private func touchupSignupButton() {
-        let secondVC = SecondViewController()
-        
-//        if let emailString = emailTextField.text {
-//            secondVC.dataBind(email: emailString)
-//        }
-        
-        self.modalPresentationStyle = .automatic
-        
-        self.present(secondVC, animated: true, completion: nil)
-        
+        let homeVC = HomeViewController()
+
+        self.navigationController?.navigationBar.isHidden = true//'<back버튼' 가리기
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
 }

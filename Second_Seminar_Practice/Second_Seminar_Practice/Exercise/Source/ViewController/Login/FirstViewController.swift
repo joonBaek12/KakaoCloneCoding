@@ -37,6 +37,7 @@ final class FirstViewController: UIViewController {
         $0.autocorrectionType = .no
         $0.autocapitalizationType = .none
         $0.keyboardType = .emailAddress
+        $0.clearButtonMode = .whileEditing
     }
     
     private let emailLineView = UIView().then {
@@ -47,6 +48,7 @@ final class FirstViewController: UIViewController {
         $0.font = UIFont.systemFont(ofSize: 10, weight: .bold)
         $0.textColor = .black
         $0.placeholder = "비밀번호"
+        $0.clearButtonMode = .whileEditing
     }
     
     private let passwordLineView = UIView().then {
@@ -82,7 +84,7 @@ final class FirstViewController: UIViewController {
         super.viewDidLoad()
         layout()
         view.backgroundColor = .white
-        
+ 
         
     }
     
@@ -170,13 +172,13 @@ extension FirstViewController{
     
     @objc
     private func touchupLoginButton() {
-        let secondVC = SecondViewController()
+        let homeVC = HomeViewController()
 
 //        if let emailString = emailTextField.text {
 //            secondVC.dataBind(email: emailString)
 //        }
         self.navigationController?.navigationBar.isHidden = true//'<back버튼' 가리기
-        self.navigationController?.pushViewController(secondVC, animated: true)
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     @objc
