@@ -1,13 +1,13 @@
 //
-//  ProfileViewController.swift
+//  AddContactController.swift
 //  Second_Seminar_Practice
 //
-//  Created by Joon Baek on 2022/06/02.
+//  Created by Joon Baek on 2022/06/09.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class AddContactController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

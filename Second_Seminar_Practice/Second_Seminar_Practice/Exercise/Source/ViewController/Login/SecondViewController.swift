@@ -84,9 +84,6 @@ final class SecondViewController: UIViewController {
         layout()
         view.backgroundColor = .white
     }
-    
-    
-    
 }
 
 //MARK: - Extentions
@@ -177,9 +174,14 @@ extension SecondViewController{
     
     @objc
     private func touchupSignupButton() {
-        let homeVC = HomeViewController()
-
+        let welcomeVC = WelcomeViewController()
+                if let emailString = emailTextField.text {
+                    welcomeVC.dataBind(email: emailString)
+                }
         self.navigationController?.navigationBar.isHidden = true//'<back버튼' 가리기
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        self.navigationController?.pushViewController(welcomeVC, animated: true)
     }
+//        welcomeVC.modalPresentationStyle = .overFullScreen
+//        self.present(welcomeVC, animated: true, completion: nil)
+//    }
 }

@@ -84,12 +84,7 @@ final class FirstViewController: UIViewController {
         super.viewDidLoad()
         layout()
         view.backgroundColor = .white
- 
-        
     }
-    
-    
-    
 }
 
 //MARK: - Extentions
@@ -172,14 +167,17 @@ extension FirstViewController{
     
     @objc
     private func touchupLoginButton() {
-        let homeVC = HomeViewController()
+        let tabbarVC = TabBarViewController()
 
 //        if let emailString = emailTextField.text {
-//            secondVC.dataBind(email: emailString)
+//            welcomeVC.dataBind(email: emailString)
 //        }
         self.navigationController?.navigationBar.isHidden = true//'<back버튼' 가리기
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        self.navigationController?.pushViewController(tabbarVC, animated: true)
     }
+//        welcomeVC.modalPresentationStyle = .overFullScreen
+//        self.present(welcomeVC, animated: true, completion: nil)
+//    }
     
     @objc
     private func touchupSignupButton() {
@@ -189,9 +187,9 @@ extension FirstViewController{
 //            secondVC.dataBind(email: emailString)
 //        }
         
-        self.modalPresentationStyle = .automatic
+        self.navigationController?.pushViewController(secondVC, animated: true)
         
-        self.present(secondVC, animated: true, completion: nil)
+//        self.present(secondVC, animated: true, completion: nil)
         
     }
 }
