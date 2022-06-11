@@ -72,7 +72,7 @@ extension WelcomeViewController{
     // MARK: - GeneralHelpers
     
     func dataBind(email: String) {
-        WelcomeLabel.text = email
+        WelcomeLabel.text = email + "님 환영합니다"
     }
     
     // MARK: - ActionHelpers

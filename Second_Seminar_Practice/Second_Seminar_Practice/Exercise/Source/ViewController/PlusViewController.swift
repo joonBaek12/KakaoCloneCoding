@@ -7,6 +7,11 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
+//MARK: - PlusViewController
+
 class PlusViewController: UIViewController {
 
     //MARK: - LazyComponents
@@ -17,8 +22,9 @@ class PlusViewController: UIViewController {
         $0.setTitle("로그아웃", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 10, weight: .black)
-        $0.addTarget(self, action: #selector(touchupBackButton), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(touchupLogoutButton), for: .touchUpInside)
     }
+    
     //MARK: - Variables
 
 
@@ -26,8 +32,8 @@ class PlusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        layout()
         view.backgroundColor = .white
+        layout()
     }
 }
 
@@ -38,32 +44,32 @@ extension PlusViewController{
     //MARK: - LayoutHelpers
     
     private func layout() {
-        
+
         view.adds(
             [
-                touchupBackButton()
+                logoutButton,
             ]
         )
-        touchupBackButton.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.height.equalTo(40)
-            $0.width.equalTo(100)
+
+        logoutButton.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(30)
+            $0.width.equalTo(40)
+            $0.height.equalTo(20)
+            
         }
-        
     }
-    
+
     // MARK: - GeneralHelpers
-        
+
     // MARK: - ActionHelpers
-    
+
     @objc
-    private func touchupBackButton() {
-       
+    private func touchupLogoutButton() {
+        let firstVC = FirstViewController()
+        
         self.navigationController?.navigationBar.isHidden = true//'<back버튼' 가리기
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.pushViewController(firstVC,animated: true)
     }
-//        welcomeVC.modalPresentationStyle = .overFullScreen
-//        self.present(welcomeVC, animated: true, completion: nil)
-//    }
 }
 
