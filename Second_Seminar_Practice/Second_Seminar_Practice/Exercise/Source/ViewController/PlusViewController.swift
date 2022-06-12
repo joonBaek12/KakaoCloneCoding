@@ -66,10 +66,10 @@ extension PlusViewController{
 
     @objc
     private func touchupLogoutButton() {
-        let firstVC = FirstViewController()
-        
-        self.navigationController?.navigationBar.isHidden = true//'<back버튼' 가리기
-        self.navigationController?.pushViewController(firstVC,animated: true)
+        if let rootNavi = self.navigationController?.tabBarController?.navigationController {
+            rootNavi.popToRootViewController(animated: true)
+        }
+//        self.navigationController?.tabBarController?.navigationController?.popToRootViewController(animated: true)
     }
 }
 

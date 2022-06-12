@@ -13,7 +13,7 @@ import Then
 
 // MARK: - SecondAutolayoutViewController
 
-final class SecondAutolayoutViewController: UIViewController {
+final class AppstorePracticeViewController: UIViewController {
     
     // MARK: - Lazy Components
     
@@ -79,7 +79,7 @@ final class SecondAutolayoutViewController: UIViewController {
 
 // MARK: - Extensions
 
-extension SecondAutolayoutViewController {
+extension AppstorePracticeViewController {
     
     // MARK: - Layout Helpers
     

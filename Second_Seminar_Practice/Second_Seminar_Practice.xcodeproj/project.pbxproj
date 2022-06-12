@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3701E1EF2833857F00597094 /* SecondAutolayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701E1EE2833857F00597094 /* SecondAutolayoutViewController.swift */; };
+		3701E1EF2833857F00597094 /* AppstorePracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701E1EE2833857F00597094 /* AppstorePracticeViewController.swift */; };
 		3701E1F2283385CD00597094 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 3701E1F1283385CD00597094 /* Then */; };
 		3701E1F52833860D00597094 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3701E1F42833860D00597094 /* SnapKit */; };
 		3701E1FB283389BF00597094 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = 3701E1FA283389BF00597094 /* SwiftyColor */; };
@@ -22,11 +22,15 @@
 		37053FC227F1AC1100F5D2F0 /* SecondTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37053FC127F1AC1100F5D2F0 /* SecondTab.storyboard */; };
 		37053FC627F1AD9000F5D2F0 /* FirstTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37053FC527F1AD9000F5D2F0 /* FirstTab.storyboard */; };
 		3713F1922840A545002B9C38 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713F1912840A545002B9C38 /* SecondViewController.swift */; };
+		3739D8A4285484E600ACD3CC /* ScrollViewPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8A3285484E600ACD3CC /* ScrollViewPracticeViewController.swift */; };
+		3739D8A628548E5E00ACD3CC /* CollectionViewPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8A528548E5E00ACD3CC /* CollectionViewPracticeViewController.swift */; };
+		3739D8A82854985E00ACD3CC /* ServiceListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8A72854985E00ACD3CC /* ServiceListDataModel.swift */; };
+		3739D8AC285498BB00ACD3CC /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8AB285498BB00ACD3CC /* AppTableViewCell.swift */; };
+		3739D8AE2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8AD2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift */; };
+		3739D8B02854B47900ACD3CC /* CloneAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */; };
 		378814A827F2FF8C002FA1BC /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A727F2FF8C002FA1BC /* StackView.storyboard */; };
 		378814AA27F304EA002FA1BC /* ScrollView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A927F304EA002FA1BC /* ScrollView.storyboard */; };
 		379E72022851C55D00555DA5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E72012851C55D00555DA5 /* WelcomeViewController.swift */; };
-		379E722B2851CE0A00555DA5 /* ContactsControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E722A2851CE0A00555DA5 /* ContactsControllers.swift */; };
-		379E722F2851CE3900555DA5 /* AddContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E722E2851CE3900555DA5 /* AddContactController.swift */; };
 		37D9F3BD2845BA1200CEC73E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9F3BC2845BA1200CEC73E /* ChatViewController.swift */; };
 		37D9F3BF2845BA1D00CEC73E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9F3BE2845BA1D00CEC73E /* LibraryViewController.swift */; };
 		37D9F3C12845BAD300CEC73E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9F3C02845BAD300CEC73E /* TabBarViewController.swift */; };
@@ -37,7 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3701E1EE2833857F00597094 /* SecondAutolayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondAutolayoutViewController.swift; sourceTree = "<group>"; };
+		3701E1EE2833857F00597094 /* AppstorePracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppstorePracticeViewController.swift; sourceTree = "<group>"; };
 		3701E1FC28338E2900597094 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		3701E1FE28339F3000597094 /* Layout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Layout.storyboard; sourceTree = "<group>"; };
 		3701E2002836098B00597094 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -51,11 +55,15 @@
 		37053FC127F1AC1100F5D2F0 /* SecondTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondTab.storyboard; sourceTree = "<group>"; };
 		37053FC527F1AD9000F5D2F0 /* FirstTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstTab.storyboard; sourceTree = "<group>"; };
 		3713F1912840A545002B9C38 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3739D8A3285484E600ACD3CC /* ScrollViewPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPracticeViewController.swift; sourceTree = "<group>"; };
+		3739D8A528548E5E00ACD3CC /* CollectionViewPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewPracticeViewController.swift; sourceTree = "<group>"; };
+		3739D8A72854985E00ACD3CC /* ServiceListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListDataModel.swift; sourceTree = "<group>"; };
+		3739D8AB285498BB00ACD3CC /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
+		3739D8AD2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneCollectionViewPracticeViewController.swift; sourceTree = "<group>"; };
+		3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneAppTableViewCell.swift; sourceTree = "<group>"; };
 		378814A727F2FF8C002FA1BC /* StackView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
 		378814A927F304EA002FA1BC /* ScrollView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollView.storyboard; sourceTree = "<group>"; };
 		379E72012851C55D00555DA5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		379E722A2851CE0A00555DA5 /* ContactsControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsControllers.swift; sourceTree = "<group>"; };
-		379E722E2851CE3900555DA5 /* AddContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactController.swift; sourceTree = "<group>"; };
 		37D9F3BC2845BA1200CEC73E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		37D9F3BE2845BA1D00CEC73E /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		37D9F3C02845BAD300CEC73E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +116,23 @@
 			path = Second_Seminar_Practice;
 			sourceTree = "<group>";
 		};
+		3739D8A9285498A400ACD3CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3739D8A72854985E00ACD3CC /* ServiceListDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3739D8AA285498A800ACD3CC /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				3739D8AB285498BB00ACD3CC /* AppTableViewCell.swift */,
+				3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		3757BB19284B29CD00AFE0A7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +144,8 @@
 		3757BB1A284B29D000AFE0A7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3739D8AA285498A800ACD3CC /* Reusable */,
+				3739D8A9285498A400ACD3CC /* Model */,
 				3757BB24284B2AB100AFE0A7 /* ViewController */,
 			);
 			path = Source;
@@ -214,8 +241,10 @@
 		3757BB24284B2AB100AFE0A7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				379E72272851CD2700555DA5 /* ContactsTutorial */,
-				3701E1EE2833857F00597094 /* SecondAutolayoutViewController.swift */,
+				3701E1EE2833857F00597094 /* AppstorePracticeViewController.swift */,
+				3739D8A3285484E600ACD3CC /* ScrollViewPracticeViewController.swift */,
+				3739D8A528548E5E00ACD3CC /* CollectionViewPracticeViewController.swift */,
+				3739D8AD2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -244,15 +273,6 @@
 				37053FBB27F1A7A500F5D2F0 /* Info.plist */,
 			);
 			path = Support;
-			sourceTree = "<group>";
-		};
-		379E72272851CD2700555DA5 /* ContactsTutorial */ = {
-			isa = PBXGroup;
-			children = (
-				379E722A2851CE0A00555DA5 /* ContactsControllers.swift */,
-				379E722E2851CE3900555DA5 /* AddContactController.swift */,
-			);
-			path = ContactsTutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,12 +366,16 @@
 				37D9F3C3284644CE00CEC73E /* PlusViewController.swift in Sources */,
 				37D9F3C12845BAD300CEC73E /* TabBarViewController.swift in Sources */,
 				37D9F3C728465BD400CEC73E /* HomeViewController.swift in Sources */,
-				379E722F2851CE3900555DA5 /* AddContactController.swift in Sources */,
-				379E722B2851CE0A00555DA5 /* ContactsControllers.swift in Sources */,
+				3739D8AC285498BB00ACD3CC /* AppTableViewCell.swift in Sources */,
 				379E72022851C55D00555DA5 /* WelcomeViewController.swift in Sources */,
-				3701E1EF2833857F00597094 /* SecondAutolayoutViewController.swift in Sources */,
+				3739D8A628548E5E00ACD3CC /* CollectionViewPracticeViewController.swift in Sources */,
+				3701E1EF2833857F00597094 /* AppstorePracticeViewController.swift in Sources */,
+				3739D8A82854985E00ACD3CC /* ServiceListDataModel.swift in Sources */,
+				3739D8A4285484E600ACD3CC /* ScrollViewPracticeViewController.swift in Sources */,
+				3739D8B02854B47900ACD3CC /* CloneAppTableViewCell.swift in Sources */,
 				37053FAE27F1A7A500F5D2F0 /* AppDelegate.swift in Sources */,
 				37D9F3C5284644D900CEC73E /* ShoppingViewController.swift in Sources */,
+				3739D8AE2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift in Sources */,
 				3701E2012836098B00597094 /* FirstViewController.swift in Sources */,
 				37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */,
 				3713F1922840A545002B9C38 /* SecondViewController.swift in Sources */,
