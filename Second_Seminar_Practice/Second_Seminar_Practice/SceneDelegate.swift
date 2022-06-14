@@ -20,16 +20,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             window.overrideUserInterfaceStyle = .light
             
-            let navi = UINavigationController()
-            let vc = FirstViewController()
-            navi.viewControllers = [vc]
-            window.rootViewController = navi
+//            let navi = UINavigationController()
+//            let vc = FirstViewController()
+//            navi.viewControllers = [vc]
+//            window.rootViewController = navi
             
 //            let vc = TabBarViewController()
 //            window.rootViewController = vc
             
-//            let vc = CollectionPracticeViewController()
-//            window.rootViewController = vc
+            let vc = CollectionPracticeViewController()
+            window.rootViewController = vc
 //
             window.makeKeyAndVisible()
             self.window = window

@@ -38,6 +38,7 @@
 		37D9F3C5284644D900CEC73E /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9F3C4284644D900CEC73E /* ShoppingViewController.swift */; };
 		37D9F3C728465BD400CEC73E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9F3C628465BD400CEC73E /* HomeViewController.swift */; };
 		37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E5DE40284A4544000E8FA9 /* MyTabViewController.swift */; };
+		37F047622858D3A60031B0D3 /* CloneServiceListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047612858D3A60031B0D3 /* CloneServiceListDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		37D9F3C4284644D900CEC73E /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		37D9F3C628465BD400CEC73E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		37E5DE40284A4544000E8FA9 /* MyTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabViewController.swift; sourceTree = "<group>"; };
+		37F047612858D3A60031B0D3 /* CloneServiceListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneServiceListDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				3739D8A72854985E00ACD3CC /* ServiceListDataModel.swift */,
+				37F047612858D3A60031B0D3 /* CloneServiceListDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				37D9F3BF2845BA1D00CEC73E /* LibraryViewController.swift in Sources */,
 				37D9F3C3284644CE00CEC73E /* PlusViewController.swift in Sources */,
 				37D9F3C12845BAD300CEC73E /* TabBarViewController.swift in Sources */,
+				37F047622858D3A60031B0D3 /* CloneServiceListDataModel.swift in Sources */,
 				37D9F3C728465BD400CEC73E /* HomeViewController.swift in Sources */,
 				3739D8AC285498BB00ACD3CC /* AppTableViewCell.swift in Sources */,
 				379E72022851C55D00555DA5 /* WelcomeViewController.swift in Sources */,

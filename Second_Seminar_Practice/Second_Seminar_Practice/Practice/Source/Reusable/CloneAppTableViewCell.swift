@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import XCTest
 
 //MARK: - AppTableViewCell
 
@@ -57,6 +58,54 @@ final class CloneAppTableViewCell: UITableViewCell {
     extension CloneAppTableViewCell {
     //MARK: - Layout Helpers
     
+        private func layout() {
+            contentView.backgroundColor = .clear
+            self.backgroundColor = .clear
+            contentView.adds(
+                [
+                    appImageContainerView,
+                    titleLabel,
+                    descriptionLabel,
+                    downlaodButton
+                ]
+            )
+            
+            appImageContainerView.add(appImageView)
+            
+            appImageContainerView.snp.makeConstraints {
+                $0.centerY.equalToSuperview()
+                $0.leading.equalToSuperview().offset(18)
+                $0.width.height.equalTo(80)
+            }
+            
+            appImageContainerView.snp.makeConstraints {
+                $0.centerY.equalToSuperview()
+                $0.leading.equalToSuperview().offset(18)
+                $0.width.height.equalTo(80)
+            }
+            
+            appImageView.snp.makeConstraints {
+                $0.edges.equalToSuperview()
+            }
+            
+            titleLabel.snp.makeConstraints {
+                $0.top.equalTo(self.appImageContainerView)
+                $0.leading.equalTo(self.appImageView.snp.trailing).offset(20)
+            }
+            
+            descriptionLabel.snp.makeConstraints {
+                $0.top.equalTo(self.appImageContainerView)
+                $0.leading.equalTo(self.appImageContainerView.snp.bottom).offset(20)
+                
+                downlaodButton.layer.cornerRadius = 12
+                downlaodButton.snp.makeConstraints {
+                    $0.bottom.equalTo(self.appImageContainerView)
+                    $0.leading.equalTo(self.titleLabel)
+                    $0.width.equalTo(65)
+                    $0.height.equalTo(25)
+                }
+            }
+        }
     //MARK: - General Helpers
 
     func dataBind(model: ServiceListDataModel) {

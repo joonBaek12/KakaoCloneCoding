@@ -26,12 +26,54 @@ final class CloneCollectionViewPracticeViewController: UIViewController {
     
     //MARK: - Variables
     
+    let serviceImageNames: [String] =
+    [
+        "soptAppIcon1",
+        "soptAppIcon2",
+        "soptAppIcon3",
+        "soptAppIcon4",
+        "soptAppIcon5",
+        "soptAppIcon6",
+        "soptAppIcon7",
+        "soptAppIcon7",
+        "soptAppIcon7"
+    ]
+    
+    let serviceNames: [String] =
+    [
+        "OUNCE - 집사를 위한 똑똑한 기록장",
+        "포켓유니브",
+        "MOMO",
+        "Weathy(웨디)",
+        "BeMe",
+        "placepic",
+        "몽글(Mongle)",
+        "몽글(Mongle)",
+        "몽글(Mongle)"
+    ]
+    
+    let serviceDescription: [String] =
+    [
+        "우리 고양이의 까다로운 입맛 정리 서비스",
+        "MZ세대를 위한, 올인원 대학생활 관리 플랫폼",
+        "책 속의 문장과 함께 쓰는 일기",
+        "나에게 돌아오는 맞춤 날씨 서비스",
+        "나를 알아가는 질문 다이어리",
+        "우리들끼리 공유하는 최애장소, 플레이스픽",
+        "우리가 만드는 문장 큐레이션 플랫폼, 몽글",
+        "우리가 만드는 문장 큐레이션 플랫폼, 몽글",
+        "우리가 만드는 문장 큐레이션 플랫폼, 몽글"
+    ]
+    
+    var serviceList: [CloneServiceListDataModel] = []
     //MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        register()
+        configDelegate()
         layout()
+        inputDataInModel()
     }
 }
 
@@ -53,9 +95,38 @@ extension CloneCollectionViewPracticeViewController {
 
     //MARK: - General Helpers
 
+    private func register() {
+        appTableView.register(AppTableViewCell.self, forCellReuseIdentifier: AppTableViewCell.identifier)
+    }
+    
+    private func configDelegate() {
+        appTableView.delegate = self
+        appTableView.dataSource = self
+    }
+    
+    private func inputDataInModel() {
+        for i in 0..<9 {
+            self.serviceList.append(ServiceListDataModel(iconImageName: iconImageNames[i], name: self.serviceNames[i], description: self.serviceDescription
+                                                        )
+            )
+        }
+    }
+    appTableView.reloadData()
+    
+    }
+}
 //MARK: - UITableViewDelagate
+extension CollectionPracticeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 150
+    }
+        else {
+            return 106
+        }
+    }
+}
 
 //MARK: - UITableViewDataSource
 
 
-}
