@@ -14,6 +14,8 @@ import Then
 
 final class AppTableViewCell: UITableViewCell {
 
+    //MARK: - Lazy Components
+    
     // MARK: - Components
     
     private let appImageContainerView = UIView().then {
@@ -50,7 +52,7 @@ final class AppTableViewCell: UITableViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder:) has not been implemented")//???
     }
 }
 

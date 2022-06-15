@@ -39,6 +39,9 @@
 		37D9F3C728465BD400CEC73E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9F3C628465BD400CEC73E /* HomeViewController.swift */; };
 		37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E5DE40284A4544000E8FA9 /* MyTabViewController.swift */; };
 		37F047622858D3A60031B0D3 /* CloneServiceListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047612858D3A60031B0D3 /* CloneServiceListDataModel.swift */; };
+		37F047642859F66D0031B0D3 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047632859F66D0031B0D3 /* FriendViewController.swift */; };
+		37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047652859F9C00031B0D3 /* FriendTableViewCell.swift */; };
+		37F04768285A18310031B0D3 /* ProfileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F04767285A18300031B0D3 /* ProfileDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,9 @@
 		37D9F3C628465BD400CEC73E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		37E5DE40284A4544000E8FA9 /* MyTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabViewController.swift; sourceTree = "<group>"; };
 		37F047612858D3A60031B0D3 /* CloneServiceListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneServiceListDataModel.swift; sourceTree = "<group>"; };
+		37F047632859F66D0031B0D3 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		37F047652859F9C00031B0D3 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		37F04767285A18300031B0D3 /* ProfileDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,7 @@
 				37D9F3C4284644D900CEC73E /* ShoppingViewController.swift */,
 				37D9F3BE2845BA1D00CEC73E /* LibraryViewController.swift */,
 				37D9F3BC2845BA1200CEC73E /* ChatViewController.swift */,
+				37F047632859F66D0031B0D3 /* FriendViewController.swift */,
 				37D9F3C628465BD400CEC73E /* HomeViewController.swift */,
 				37D9F3C02845BAD300CEC73E /* TabBarViewController.swift */,
 			);
@@ -207,6 +214,7 @@
 		3757BB20284B2A3E00AFE0A7 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
+				37F047652859F9C00031B0D3 /* FriendTableViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 		3757BB21284B2A4700AFE0A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37F04767285A18300031B0D3 /* ProfileDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,8 +391,11 @@
 				3739D8AE2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift in Sources */,
 				3701E2012836098B00597094 /* FirstViewController.swift in Sources */,
 				37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */,
+				37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */,
 				3713F1922840A545002B9C38 /* SecondViewController.swift in Sources */,
 				37053FB027F1A7A500F5D2F0 /* SceneDelegate.swift in Sources */,
+				37F04768285A18310031B0D3 /* ProfileDataModel.swift in Sources */,
+				37F047642859F66D0031B0D3 /* FriendViewController.swift in Sources */,
 				3701E1FD28338E2900597094 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

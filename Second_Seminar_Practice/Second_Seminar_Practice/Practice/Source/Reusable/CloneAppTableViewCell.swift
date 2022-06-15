@@ -9,7 +9,6 @@ import UIKit
 
 import SnapKit
 import Then
-import XCTest
 
 //MARK: - AppTableViewCell
 
@@ -42,7 +41,7 @@ final class CloneAppTableViewCell: UITableViewCell {
     
     //MARK: - Variables
     
-    static let identifier = "AppTableViewCell"
+    static let identifier = "CloneAppTableViewCell"
     
     //MARK: - LifeCycles
     
@@ -55,7 +54,9 @@ final class CloneAppTableViewCell: UITableViewCell {
     }
 }
 //MARK: -Extentions
+
     extension CloneAppTableViewCell {
+        
     //MARK: - Layout Helpers
     
         private func layout() {
@@ -94,8 +95,9 @@ final class CloneAppTableViewCell: UITableViewCell {
             }
             
             descriptionLabel.snp.makeConstraints {
-                $0.top.equalTo(self.appImageContainerView)
-                $0.leading.equalTo(self.appImageContainerView.snp.bottom).offset(20)
+                $0.top.equalTo(self.titleLabel.snp.bottom).offset(6)
+                $0.leading.equalTo(self.titleLabel)
+            }
                 
                 downlaodButton.layer.cornerRadius = 12
                 downlaodButton.snp.makeConstraints {
@@ -105,7 +107,7 @@ final class CloneAppTableViewCell: UITableViewCell {
                     $0.height.equalTo(25)
                 }
             }
-        }
+        
     //MARK: - General Helpers
 
     func dataBind(model: ServiceListDataModel) {

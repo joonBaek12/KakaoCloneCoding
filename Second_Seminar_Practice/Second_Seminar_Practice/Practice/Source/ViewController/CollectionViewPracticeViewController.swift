@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
+//MARK: - CollectionPracticeViwController
+
 final class CollectionPracticeViewController: UIViewController {
     
     // MARK: - Lazy Components

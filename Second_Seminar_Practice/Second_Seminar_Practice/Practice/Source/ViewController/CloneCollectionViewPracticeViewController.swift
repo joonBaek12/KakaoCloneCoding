@@ -65,9 +65,10 @@ final class CloneCollectionViewPracticeViewController: UIViewController {
         "우리가 만드는 문장 큐레이션 플랫폼, 몽글"
     ]
     
-    var serviceList: [CloneServiceListDataModel] = []
+    var cloneServiceList: [CloneServiceListDataModel] = []
+    
     //MARK: - LifeCycles
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         register()
@@ -79,7 +80,7 @@ final class CloneCollectionViewPracticeViewController: UIViewController {
 
 //MARK: - Extentions
 extension CloneCollectionViewPracticeViewController {
-
+    
     //MARK: - Layout Helplers
     
     private func layout() {
@@ -89,14 +90,16 @@ extension CloneCollectionViewPracticeViewController {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview().offset(-20)
-//            $0.height.equalTo(<#T##other: ConstraintRelatableTarget##ConstraintRelatableTarget#>)
+            $0.height.equalTo(1061)
         }
     }
-
+    
     //MARK: - General Helpers
-
+    
     private func register() {
-        appTableView.register(AppTableViewCell.self, forCellReuseIdentifier: AppTableViewCell.identifier)
+        appTableView.register(AppTableViewCell.self,
+                              forCellReuseIdentifier: AppTableViewCell.identifier
+        )
     }
     
     private func configDelegate() {
@@ -106,21 +109,24 @@ extension CloneCollectionViewPracticeViewController {
     
     private func inputDataInModel() {
         for i in 0..<9 {
-            self.serviceList.append(ServiceListDataModel(iconImageName: iconImageNames[i], name: self.serviceNames[i], description: self.serviceDescription
-                                                        )
+            self.cloneServiceList.append(
+                CloneServiceListDataModel(
+                    iconImageName: self.serviceImageNames[i],
+                    name: self.serviceNames[i],
+                    description: self.serviceDescription[i]
+                )
             )
         }
-    }
-    appTableView.reloadData()
-    
+        appTableView.reloadData()
     }
 }
+
 //MARK: - UITableViewDelagate
-extension CollectionPracticeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+extension CloneCollectionViewPracticeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 150
-    }
+        }
         else {
             return 106
         }
@@ -129,4 +135,25 @@ extension CollectionPracticeViewController: UITableViewDelegate {
 
 //MARK: - UITableViewDataSource
 
-
+extension CloneCollectionViewPracticeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 9
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            guard let cloneAppCell = tableView.dequeueReusableCell(
+                withIdentifier: CloneAppTableViewCell.identifier, for: indexPath
+            ) as? CloneAppTableViewCell else {
+                return UITableViewCell() }
+           cloneAppCell.dataBind(model: cloneServiceList[indexPath.row])
+            return cloneAppCell
+        }
+        else {
+            guard let appCell = tableView.dequeueReusableCell(withIdentifier: CloneAppTableViewCell.identifier, for: indexPath
+        )as? CloneAppTableViewCell else { return UITableViewCell() }
+        cloneAppCell.dataBind(model: cloneServiceList[indexPath.row])
+        return cloneAppCell
+        }
+    }
+}

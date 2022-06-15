@@ -56,7 +56,7 @@ extension TabBarViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let vc1 = HomeViewController()
+        let vc1 = FriendViewController()
         let vc2 = ChatViewController()
         let vc3 = LibraryViewController()
         let vc4 = ShoppingViewController()
