@@ -90,8 +90,8 @@ extension FriendTableViewCell {
     //MARK: - General Helpers
 
     func dataBind(model:ProfileDataModel) {
-        profileImageView.image = uiimage(named: model.iconImageName)
-        nameLabel.image = model.name
+        profileImageView.image = UIImage(named: model.iconImageName)
+        nameLabel.text = model.name
         descriptionLabel.text = model.description
     }
 }

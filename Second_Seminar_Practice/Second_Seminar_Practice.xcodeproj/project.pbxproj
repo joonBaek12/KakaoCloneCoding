@@ -205,8 +205,8 @@
 				37D9F3BE2845BA1D00CEC73E /* LibraryViewController.swift */,
 				37D9F3BC2845BA1200CEC73E /* ChatViewController.swift */,
 				37F047632859F66D0031B0D3 /* FriendViewController.swift */,
-				37D9F3C628465BD400CEC73E /* HomeViewController.swift */,
 				37D9F3C02845BAD300CEC73E /* TabBarViewController.swift */,
+				37D9F3C628465BD400CEC73E /* HomeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
