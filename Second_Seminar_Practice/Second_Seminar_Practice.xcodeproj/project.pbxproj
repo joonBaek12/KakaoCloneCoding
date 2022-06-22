@@ -42,6 +42,9 @@
 		37F047642859F66D0031B0D3 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047632859F66D0031B0D3 /* FriendViewController.swift */; };
 		37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047652859F9C00031B0D3 /* FriendTableViewCell.swift */; };
 		37F04768285A18310031B0D3 /* ProfileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F04767285A18300031B0D3 /* ProfileDataModel.swift */; };
+		37F0476A285EFD360031B0D3 /* BigFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F04769285EFD360031B0D3 /* BigFriendTableViewCell.swift */; };
+		37F0476C285F03C40031B0D3 /* MusicPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0476B285F03C40031B0D3 /* MusicPracticeViewController.swift */; };
+		37F0476E285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +82,9 @@
 		37F047632859F66D0031B0D3 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		37F047652859F9C00031B0D3 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		37F04767285A18300031B0D3 /* ProfileDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataModel.swift; sourceTree = "<group>"; };
+		37F04769285EFD360031B0D3 /* BigFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigFriendTableViewCell.swift; sourceTree = "<group>"; };
+		37F0476B285F03C40031B0D3 /* MusicPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPracticeViewController.swift; sourceTree = "<group>"; };
+		37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPracticeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 			children = (
 				3739D8AB285498BB00ACD3CC /* AppTableViewCell.swift */,
 				3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */,
+				37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -188,8 +195,8 @@
 		3757BB1E284B2A2100AFE0A7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3757BB21284B2A4700AFE0A7 /* Model */,
 				3757BB20284B2A3E00AFE0A7 /* Reusable */,
+				3757BB21284B2A4700AFE0A7 /* Model */,
 				3757BB1F284B2A3400AFE0A7 /* ViewController */,
 			);
 			path = Source;
@@ -215,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				37F047652859F9C00031B0D3 /* FriendTableViewCell.swift */,
+				37F04769285EFD360031B0D3 /* BigFriendTableViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 				3739D8A3285484E600ACD3CC /* ScrollViewPracticeViewController.swift */,
 				3739D8A528548E5E00ACD3CC /* CollectionViewPracticeViewController.swift */,
 				3739D8AD2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift */,
+				37F0476B285F03C40031B0D3 /* MusicPracticeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 				379E72022851C55D00555DA5 /* WelcomeViewController.swift in Sources */,
 				3739D8A628548E5E00ACD3CC /* CollectionViewPracticeViewController.swift in Sources */,
 				3701E1EF2833857F00597094 /* AppstorePracticeViewController.swift in Sources */,
+				37F0476A285EFD360031B0D3 /* BigFriendTableViewCell.swift in Sources */,
 				3739D8A82854985E00ACD3CC /* ServiceListDataModel.swift in Sources */,
 				3739D8A4285484E600ACD3CC /* ScrollViewPracticeViewController.swift in Sources */,
 				3739D8B02854B47900ACD3CC /* CloneAppTableViewCell.swift in Sources */,
@@ -393,8 +403,10 @@
 				37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */,
 				37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */,
 				3713F1922840A545002B9C38 /* SecondViewController.swift in Sources */,
+				37F0476E285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift in Sources */,
 				37053FB027F1A7A500F5D2F0 /* SceneDelegate.swift in Sources */,
 				37F04768285A18310031B0D3 /* ProfileDataModel.swift in Sources */,
+				37F0476C285F03C40031B0D3 /* MusicPracticeViewController.swift in Sources */,
 				37F047642859F66D0031B0D3 /* FriendViewController.swift in Sources */,
 				3701E1FD28338E2900597094 /* UIView+.swift in Sources */,
 			);

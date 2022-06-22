@@ -47,7 +47,7 @@ final class CloneAppTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle,reuseIdentifier: String?) {
         super.init(style: .default,reuseIdentifier: CloneAppTableViewCell.identifier)
-//        layout()
+        layout()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -110,7 +110,7 @@ final class CloneAppTableViewCell: UITableViewCell {
         
     //MARK: - General Helpers
 
-    func dataBind(model: ServiceListDataModel) {
+    func dataBind(model: CloneServiceListDataModel) {
         appImageView.image = UIImage(named: model.iconImageName)
         titleLabel.text = model.name
         descriptionLabel.text = model.description

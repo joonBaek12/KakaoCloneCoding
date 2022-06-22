@@ -10,9 +10,9 @@ import UIKit
 import SnapKit
 import Then
 
-//MARK: -FriendTableviewCell
+//MARK: - BigFriendTableViewCell
 
-final class FriendTableViewCell: UITableViewCell {
+final class BigFriendTableViewCell: UITableViewCell {
 
     //MARK: - lazy Components
     
@@ -21,13 +21,10 @@ final class FriendTableViewCell: UITableViewCell {
         $0.backgroundColor = .clear
     }
     
-    private let profileImageView = UIImageView().then {
-        $0.contentMode = .scaleToFill
-    }
-    
+    private let profileImageView = UIImageView()
     private let nameLabel = UILabel().then {
         $0.textColor = .black
-        $0.font = .systemFont(ofSize: 12, weight: .semibold)
+        $0.font = .systemFont(ofSize: 16, weight: .semibold)
     }
     
     private let descriptionLabel = UILabel().then {
@@ -35,9 +32,13 @@ final class FriendTableViewCell: UITableViewCell {
         $0.font = .systemFont(ofSize: 11, weight: .regular)
     }
     
+    private let underBarView = UIView().then {
+        $0.backgroundColor = .systemGray6
+    }
+    
     //MARK: - Variables
     
-    static let identifier = "FriendTableViewCell"
+    static let identifier = "BigFriendTableViewCell"
     
     //MARK: - Life Cycles
     
@@ -52,7 +53,7 @@ final class FriendTableViewCell: UITableViewCell {
 }
 //MARK: - Extentions
  
-extension FriendTableViewCell {
+extension BigFriendTableViewCell {
 
     //MARK: - Layout Helpers
     private func layout() {
@@ -62,7 +63,8 @@ extension FriendTableViewCell {
             [
                 profileImageContainerView,
                 nameLabel,
-                descriptionLabel
+                descriptionLabel,
+                underBarView
             ]
         )
         
@@ -70,9 +72,9 @@ extension FriendTableViewCell {
         
         profileImageContainerView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().offset(16)
-            $0.width.equalTo(44)
-            $0.height.equalTo(41)
+            $0.leading.equalToSuperview().offset(14)
+            $0.width.equalTo(59)
+            $0.height.equalTo(58)
         }
         
         profileImageView.snp.makeConstraints {
@@ -80,13 +82,19 @@ extension FriendTableViewCell {
         }
         
         nameLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(10)
-            $0.leading.equalTo(self.profileImageContainerView.snp.trailing).offset(11)
+            $0.top.equalTo(self.profileImageContainerView).offset(10)
+            $0.leading.equalTo(self.profileImageContainerView.snp.trailing).offset(10)
         }
         
         descriptionLabel.snp.makeConstraints {
-            $0.top.equalTo(self.nameLabel.snp.bottom).offset(4)
+            $0.top.equalTo(self.nameLabel.snp.bottom).offset(9)
             $0.leading.equalTo(self.nameLabel)
+        }
+        
+        underBarView.snp.makeConstraints {
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(1)
         }
     }
     //MARK: - General Helpers

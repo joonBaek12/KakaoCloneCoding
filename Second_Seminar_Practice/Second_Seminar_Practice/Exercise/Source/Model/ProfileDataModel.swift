@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct ProfileDataModel {
-    var iconImageName: String
+    var profileImageName: String
     var name: String
     var description: String
 }

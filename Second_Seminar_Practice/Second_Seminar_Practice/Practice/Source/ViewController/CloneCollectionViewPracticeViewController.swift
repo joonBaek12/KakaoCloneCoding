@@ -97,8 +97,8 @@ extension CloneCollectionViewPracticeViewController {
     //MARK: - General Helpers
     
     private func register() {
-        appTableView.register(AppTableViewCell.self,
-                              forCellReuseIdentifier: AppTableViewCell.identifier
+        appTableView.register(CloneAppTableViewCell.self,
+                              forCellReuseIdentifier: CloneAppTableViewCell.identifier
         )
     }
     
@@ -144,16 +144,18 @@ extension CloneCollectionViewPracticeViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             guard let cloneAppCell = tableView.dequeueReusableCell(
                 withIdentifier: CloneAppTableViewCell.identifier, for: indexPath
-            ) as? CloneAppTableViewCell else {
-                return UITableViewCell() }
-           cloneAppCell.dataBind(model: cloneServiceList[indexPath.row])
+            ) as? CloneAppTableViewCell else {return UITableViewCell() }
+            
+            cloneAppCell.dataBind(model: cloneServiceList[indexPath.row])
             return cloneAppCell
         }
         else {
             guard let appCell = tableView.dequeueReusableCell(withIdentifier: CloneAppTableViewCell.identifier, for: indexPath
-        )as? CloneAppTableViewCell else { return UITableViewCell() }
-        cloneAppCell.dataBind(model: cloneServiceList[indexPath.row])
-        return cloneAppCell
+            )as? CloneAppTableViewCell else { return UITableViewCell() }
+            
+            appCell.dataBind(model: cloneServiceList[indexPath.row])
+            return appCell
         }
     }
+    
 }
