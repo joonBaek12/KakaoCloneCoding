@@ -30,6 +30,7 @@ final class MusicPracticeCollectionViewCell: UICollectionViewCell {
         $0.textColor = .systemGray2
         $0.font = .systemFont(ofSize: 10, weight: .regular)
     }
+    
     //MARK: - Variables
     
     static let identifier = "MusicPracticeCollectionViewCell"
@@ -61,7 +62,7 @@ extension MusicPracticeCollectionViewCell {
                 ]
             )
         
-        let width = (UIScreen.main.bounds.width -3 - 9*2)/2 - 6*2
+        let width = (UIScreen.main.bounds.width - 3 - 9*2)/2 - 6*2
         albumImageContainerView.add(albumImageView)
         albumImageContainerView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(6)
@@ -69,23 +70,23 @@ extension MusicPracticeCollectionViewCell {
             $0.width.height.equalTo(width)
         }
         
-        albumImageView.makeConstraints{
+        albumImageView.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
         
         musicTitleLabel.snp.makeConstraints {
-            top.equalTo(self.albumImageContainerView.snp.bottom).offset(4)
-            leading.equalTo(self.albumImageContainerView)
+            $0.top.equalTo(self.albumImageContainerView.snp.bottom).offset(4)
+            $0.leading.equalTo(self.albumImageContainerView)
         }
         
         singerLabel.snp.makeConstraints {
-            top.equalTo(self.musicTitleLabel.snp.bottom).offset(3)
-            leading.equalTo(self.albumImageContainerView)
+            $0.top.equalTo(self.musicTitleLabel.snp.bottom).offset(3)
+            $0.leading.equalTo(self.albumImageContainerView)
         }
     }
     //MARK: - General Helpers
     
-    func databind (albumImage: String musicTitle: String singerLabel: String) {
+    func databind (albumImage: String, musicTitle: String, singer: String) {
         albumImageView.image = UIImage(named: albumImage)
         musicTitleLabel.text = musicTitle
         singerLabel.text = singer

@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            let vc = TabBarViewController()
 //            window.rootViewController = vc
             
-            let vc = CollectionPracticeViewController()
+            let vc = AppListViewController()
             window.rootViewController = vc
 //
             window.makeKeyAndVisible()

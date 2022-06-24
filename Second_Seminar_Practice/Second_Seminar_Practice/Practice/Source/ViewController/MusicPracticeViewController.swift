@@ -43,8 +43,8 @@ final class MusicPracticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         register()
+        configDelegate()
         layout()
-
     }
 }
 
@@ -55,14 +55,17 @@ extension MusicPracticeViewController {
     //MARK: - Layout Helpers
     
     private func layout() {
+//        view.backgroundColor = .white
         view.add(musicCollectionView)
+        
+        let width = (UIScreen.main.bounds.width - 9*2 - 3) / 2 + 34 //34?
         
         musicCollectionView.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview()
             $0.height.equalTo(0)
-            $0.leading.trailing.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()//왜 두번?
         }
         
     }
@@ -86,9 +89,8 @@ extension MusicPracticeViewController {
 extension MusicPracticeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        width = (UIScreen.main.bounds.width - 9*2 - 3) / 2
-        
-        return (width: width, height: width + 34)
+       let width = (UIScreen.main.bounds.width - 9*2 - 3) / 2
+        return CGSize(width: width, height: width + 34)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -96,7 +98,7 @@ extension MusicPracticeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        3
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -110,18 +112,18 @@ extension MusicPracticeViewController: UICollectionViewDataSource {
     
 
 func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    8
+    return 8
 }
 
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let musicCell = collectionView.dequeueReusableCell(
         withReuseIdentifier: MusicPracticeCollectionViewCell.identifier, for: indexPath)
             as? MusicPracticeCollectionViewCell else {return UICollectionViewCell()}
-    }
-    musicCell.dataBind (
+    
+    musicCell.databind(
         albumImage: musicCoverNames[indexPath.item%4],
-        musicTitle: musicTitleNames[IndexPath.item%4],
-        singer: musicSingerNames[IndexPath.item%4]
+        musicTitle: musicTitleNames[indexPath.item%4],
+        singer: musicSingerNames[indexPath.item%4]
     )
     return musicCell
     }

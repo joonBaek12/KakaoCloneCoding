@@ -45,6 +45,8 @@
 		37F0476A285EFD360031B0D3 /* BigFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F04769285EFD360031B0D3 /* BigFriendTableViewCell.swift */; };
 		37F0476C285F03C40031B0D3 /* MusicPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0476B285F03C40031B0D3 /* MusicPracticeViewController.swift */; };
 		37F0476E285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */; };
+		37F047702865C5650031B0D3 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0476F2865C5650031B0D3 /* AppListCollectionViewCell.swift */; };
+		37F047722865C5820031B0D3 /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047712865C5820031B0D3 /* AppListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		37F04769285EFD360031B0D3 /* BigFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigFriendTableViewCell.swift; sourceTree = "<group>"; };
 		37F0476B285F03C40031B0D3 /* MusicPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPracticeViewController.swift; sourceTree = "<group>"; };
 		37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPracticeCollectionViewCell.swift; sourceTree = "<group>"; };
+		37F0476F2865C5650031B0D3 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
+		37F047712865C5820031B0D3 /* AppListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				3739D8AB285498BB00ACD3CC /* AppTableViewCell.swift */,
 				3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */,
 				37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */,
+				37F0476F2865C5650031B0D3 /* AppListCollectionViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				3739D8A528548E5E00ACD3CC /* CollectionViewPracticeViewController.swift */,
 				3739D8AD2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift */,
 				37F0476B285F03C40031B0D3 /* MusicPracticeViewController.swift */,
+				37F047712865C5820031B0D3 /* AppListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D9F3BD2845BA1200CEC73E /* ChatViewController.swift in Sources */,
+				37F047702865C5650031B0D3 /* AppListCollectionViewCell.swift in Sources */,
 				37D9F3BF2845BA1D00CEC73E /* LibraryViewController.swift in Sources */,
 				37D9F3C3284644CE00CEC73E /* PlusViewController.swift in Sources */,
 				37D9F3C12845BAD300CEC73E /* TabBarViewController.swift in Sources */,
@@ -404,6 +411,7 @@
 				37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */,
 				3713F1922840A545002B9C38 /* SecondViewController.swift in Sources */,
 				37F0476E285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift in Sources */,
+				37F047722865C5820031B0D3 /* AppListViewController.swift in Sources */,
 				37053FB027F1A7A500F5D2F0 /* SceneDelegate.swift in Sources */,
 				37F04768285A18310031B0D3 /* ProfileDataModel.swift in Sources */,
 				37F0476C285F03C40031B0D3 /* MusicPracticeViewController.swift in Sources */,
