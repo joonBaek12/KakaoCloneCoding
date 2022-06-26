@@ -51,6 +51,12 @@ final class AppListCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        backgroundColor = .clear
+        contentView.backgroundColor = .clear
+    }
 }
 
 //MARK: - Extentions
@@ -103,9 +109,20 @@ extension AppListCollectionViewCell {
     }
     
     //MARK: - General Helpers
-    func databind (appImage: String, appTitle: String, appDescription:String) {
+    func databind(appImage: String, appTitle: String, appDescription:String) {
         appImageView.image = UIImage(named:  appImage)
         titleLabel.text = appTitle
         descriptionLabel.text = appDescription
+    }
+    
+    func changeBackground(isSelected: Bool) {
+        if isSelected {
+            backgroundColor = .white
+            contentView.backgroundColor = .white
+        }
+        else {
+            backgroundColor = .clear
+            contentView.backgroundColor = .clear
+        }
     }
 }

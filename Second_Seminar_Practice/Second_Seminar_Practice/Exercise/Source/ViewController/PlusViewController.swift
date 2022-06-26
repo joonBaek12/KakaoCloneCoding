@@ -18,11 +18,20 @@ class PlusViewController: UIViewController {
     
     
     //MARK: - UIComponents
+    
     private let logoutButton = UIButton().then {
         $0.setTitle("로그아웃", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 10, weight: .black)
         $0.addTarget(self, action: #selector(touchupLogoutButton), for: .touchUpInside)
+    }
+    
+    private let plusContainerView = UIContentView {
+        
+    }
+    
+    private let profileView = UIView().then {
+        $0.backgroundColor = .clear
     }
     
     //MARK: - Variables

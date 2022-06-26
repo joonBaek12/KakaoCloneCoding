@@ -71,7 +71,7 @@ final class AppListViewController: UIViewController {
         "우리가 만드는 문장 큐레이션 플랫폼, 몽글"
     ]
     
-    var serviceList: [ServiceListDataModel] = []
+    var selectedList: [Bool] = Array(repeating: false, count: 9)
     
     //MARK: - LifeCycles
     
@@ -143,17 +143,26 @@ extension AppListViewController: UICollectionViewDelegateFlowLayout {
 extension AppListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 9
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let appCell = collectionView.dequeueReusableCell(withReuseIdentifier: AppListCollectionViewCell.identifier, for: indexPath)
                 as? AppListCollectionViewCell else {return UICollectionViewCell()}
-        appCell.databind(appImage: serviceImageNames[indexPath.item%10], appTitle: serviceNames[indexPath.item%10], appDescription: serviceDescription[indexPath.item%10]
+        appCell.databind(appImage: serviceImageNames[indexPath.item], appTitle: serviceNames[indexPath.item], appDescription: serviceDescription[indexPath.item]
         )
+        
+        
+        appCell.changeBackground(isSelected: selectedList[indexPath.item])
+        
+        
         return appCell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedList[indexPath.item].toggle()
+        collectionView.reloadData()   
+    }
 }
 
 

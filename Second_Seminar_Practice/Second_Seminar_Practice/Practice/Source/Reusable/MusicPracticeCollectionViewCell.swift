@@ -86,10 +86,14 @@ extension MusicPracticeCollectionViewCell {
     }
     //MARK: - General Helpers
     
-    func databind (albumImage: String, musicTitle: String, singer: String) {
+    func databind(albumImage: String, musicTitle: String, singer: String) {
         albumImageView.image = UIImage(named: albumImage)
         musicTitleLabel.text = musicTitle
         singerLabel.text = singer
+    }
+    
+    func changeDataBind(albumImage: String) {
+        albumImageView.image = UIImage(named: albumImage)
     }
 }
 
