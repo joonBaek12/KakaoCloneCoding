@@ -48,6 +48,8 @@
 		37F047702865C5650031B0D3 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0476F2865C5650031B0D3 /* AppListCollectionViewCell.swift */; };
 		37F047722865C5820031B0D3 /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047712865C5820031B0D3 /* AppListViewController.swift */; };
 		37F047742869C7140031B0D3 /* PlusTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047732869C7140031B0D3 /* PlusTabCollectionViewCell.swift */; };
+		37F047762869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047752869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift */; };
+		37F047782869FC5D0031B0D3 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047772869FC5D0031B0D3 /* PhotoListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,8 @@
 		37F0476F2865C5650031B0D3 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
 		37F047712865C5820031B0D3 /* AppListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListViewController.swift; sourceTree = "<group>"; };
 		37F047732869C7140031B0D3 /* PlusTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusTabCollectionViewCell.swift; sourceTree = "<group>"; };
+		37F047752869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		37F047772869FC5D0031B0D3 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 				3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */,
 				37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */,
 				37F0476F2865C5650031B0D3 /* AppListCollectionViewCell.swift */,
+				37F047752869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				3739D8A528548E5E00ACD3CC /* CollectionViewPracticeViewController.swift */,
 				3739D8AD2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift */,
 				37F0476B285F03C40031B0D3 /* MusicPracticeViewController.swift */,
+				37F047772869FC5D0031B0D3 /* PhotoListViewController.swift */,
 				37F047712865C5820031B0D3 /* AppListViewController.swift */,
 			);
 			path = ViewController;
@@ -412,6 +418,7 @@
 				3701E2012836098B00597094 /* FirstViewController.swift in Sources */,
 				37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */,
 				37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */,
+				37F047762869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift in Sources */,
 				3713F1922840A545002B9C38 /* SecondViewController.swift in Sources */,
 				37F0476E285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift in Sources */,
 				37F047722865C5820031B0D3 /* AppListViewController.swift in Sources */,
@@ -419,6 +426,7 @@
 				37F04768285A18310031B0D3 /* ProfileDataModel.swift in Sources */,
 				37F047742869C7140031B0D3 /* PlusTabCollectionViewCell.swift in Sources */,
 				37F0476C285F03C40031B0D3 /* MusicPracticeViewController.swift in Sources */,
+				37F047782869FC5D0031B0D3 /* PhotoListViewController.swift in Sources */,
 				37F047642859F66D0031B0D3 /* FriendViewController.swift in Sources */,
 				3701E1FD28338E2900597094 /* UIView+.swift in Sources */,
 			);
