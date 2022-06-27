@@ -47,6 +47,7 @@
 		37F0476E285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */; };
 		37F047702865C5650031B0D3 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0476F2865C5650031B0D3 /* AppListCollectionViewCell.swift */; };
 		37F047722865C5820031B0D3 /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047712865C5820031B0D3 /* AppListViewController.swift */; };
+		37F047742869C7140031B0D3 /* PlusTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047732869C7140031B0D3 /* PlusTabCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPracticeCollectionViewCell.swift; sourceTree = "<group>"; };
 		37F0476F2865C5650031B0D3 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
 		37F047712865C5820031B0D3 /* AppListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListViewController.swift; sourceTree = "<group>"; };
+		37F047732869C7140031B0D3 /* PlusTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusTabCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			children = (
 				37F047652859F9C00031B0D3 /* FriendTableViewCell.swift */,
 				37F04769285EFD360031B0D3 /* BigFriendTableViewCell.swift */,
+				37F047732869C7140031B0D3 /* PlusTabCollectionViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				37F047722865C5820031B0D3 /* AppListViewController.swift in Sources */,
 				37053FB027F1A7A500F5D2F0 /* SceneDelegate.swift in Sources */,
 				37F04768285A18310031B0D3 /* ProfileDataModel.swift in Sources */,
+				37F047742869C7140031B0D3 /* PlusTabCollectionViewCell.swift in Sources */,
 				37F0476C285F03C40031B0D3 /* MusicPracticeViewController.swift in Sources */,
 				37F047642859F66D0031B0D3 /* FriendViewController.swift in Sources */,
 				3701E1FD28338E2900597094 /* UIView+.swift in Sources */,

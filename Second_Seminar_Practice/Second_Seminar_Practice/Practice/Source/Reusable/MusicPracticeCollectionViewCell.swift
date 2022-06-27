@@ -16,7 +16,7 @@ final class MusicPracticeCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Components
     
-    private let albumImageContainerView = UIView().then{
+    private let albumImageContainerView = UIView().then {
         $0.backgroundColor = .clear
     }
     
@@ -36,6 +36,7 @@ final class MusicPracticeCollectionViewCell: UICollectionViewCell {
     static let identifier = "MusicPracticeCollectionViewCell"
     
     //MARK: - LifeCycles
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         layout()
@@ -70,7 +71,7 @@ extension MusicPracticeCollectionViewCell {
             $0.width.height.equalTo(width)
         }
         
-        albumImageView.snp.makeConstraints{
+        albumImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
