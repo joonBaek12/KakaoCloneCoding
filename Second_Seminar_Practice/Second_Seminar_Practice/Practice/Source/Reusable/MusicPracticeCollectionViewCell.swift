@@ -48,6 +48,7 @@ final class MusicPracticeCollectionViewCell: UICollectionViewCell {
 }
 
 //MARK: - Extentions
+
 extension MusicPracticeCollectionViewCell {
     
     //MARK: - Layout Helpers

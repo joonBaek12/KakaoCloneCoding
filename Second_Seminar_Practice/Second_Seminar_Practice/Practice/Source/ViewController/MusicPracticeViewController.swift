@@ -69,7 +69,6 @@ extension MusicPracticeViewController {
             $0.height.equalTo(0)
             $0.leading.trailing.equalToSuperview()//왜 두번?
         }
-        
     }
     
     //MARK: - General Helpers
