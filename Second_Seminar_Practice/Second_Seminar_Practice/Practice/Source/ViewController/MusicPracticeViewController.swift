@@ -50,7 +50,7 @@ final class MusicPracticeViewController: UIViewController {
     }
 }
 
-//MARK: - Extentions
+//MARK: - Extensions
 
 extension MusicPracticeViewController {
     
@@ -85,7 +85,7 @@ extension MusicPracticeViewController {
     }
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout
+//MARK: - UICollectionViewDelegateFlowLayout
 
 extension MusicPracticeViewController: UICollectionViewDelegateFlowLayout {
     

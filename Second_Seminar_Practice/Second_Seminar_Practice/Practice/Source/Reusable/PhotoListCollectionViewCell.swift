@@ -7,6 +7,48 @@
 
 import UIKit
 
-class PhotoListCollectionViewCell: UICollectionViewCell {
+import SnapKit
+import Then
+
+//MARK: - PhotoListCollectionViewCell
+
+final class PhotoListCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - Components
+    
+    private let albumImageView = UIImageView()
+    
+    //MARK: - Variables
+    
+    static let indentifier = "PhotoListCollectionViewCell"
+    
+    //MARK: - LifeCycles
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        layout()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+//MARK:  - Extentions
+
+extension PhotoListCollectionViewCell {
+    
+    //MARK: - Layout Helpers
+    
+    private func layout() {
+        contentView.add(albumImageView)
+        
+        let width = (UIScreen.main.bounds.width)/3
+        
+    }
+    
+    //MARK: - General Helpers
+    
+    func databind(albumImage:String) {
+        albumImageView.image = UIImage(named: albumImage)
+    }
 }

@@ -7,23 +7,107 @@
 
 import UIKit
 
-class PhotoListViewController: UIViewController {
+import SnapKit
+import Then
 
+//MARK: - PhotoListViewcontroller
+
+final class PhotoListViewController: UIViewController {
+    
+    //MARK: - Lazy Components
+    
+    private lazy var photoListCollectonView: uicollectionview = {
+        let layout = UICollectionViewFlowLayout().then {
+            $0.scrollDirection = .vertical
+        }
+        
+        let collectionView = UICollectionView(frame:  .zero, collectionViewLayout: layout).then {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.isScrollEnabled = true
+            $0.showsVerticalScrollIndicator = false
+            $0.backgroundColor = .clear
+        }
+        return collectionView
+    }()
+    
+    //MARK: - Variables
+    
+    let albumImageNames: [String] = []
+    
+    //MARK: - LifeCycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        register()
+        configDelegate()
+        layout()
+    }
+}
 
-        // Do any additional setup after loading the view.
+//MARK: - Extensions
+
+extension PhotoListViewController {
+      
+    //MARK: - Layout Helpers
+    
+    private func layout() {
+        view.add()
+        
+        let width = (UIScreen.main.bounds.width)/3
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK:  - General Helpers
+    
+    private func register() {
+        
     }
-    */
-
+    
+    private func configDelegate() {
+        photoListCollectonView.delegate = self
+        photoListCollectonView.dataSource = self
+    }
 }
+
+//MARK:  - UICollectionViewDelegateFlowLayout
+
+extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        <#code#>
+    }
+}
+
+//MARK: - UICollectionViewDataSource
+extension PhotoListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
+    }
+}
+
+        
+    
+
+    
+
