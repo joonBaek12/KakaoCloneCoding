@@ -147,8 +147,10 @@ extension AppListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let appCell = collectionView.dequeueReusableCell(withReuseIdentifier: AppListCollectionViewCell.identifier, for: indexPath)
+        guard let appCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: AppListCollectionViewCell.identifier, for: indexPath)
                 as? AppListCollectionViewCell else {return UICollectionViewCell()}
+        
         appCell.databind(appImage: serviceImageNames[indexPath.item], appTitle: serviceNames[indexPath.item], appDescription: serviceDescription[indexPath.item]
         )
         

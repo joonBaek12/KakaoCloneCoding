@@ -288,12 +288,12 @@ extension PlusViewController: UICollectionViewDataSource {
 
 // MARK: - ActionHelpers
 
-    @objc
-    private func touchupLogoutButton() {
-        if let rootNavi = self.navigationController?.tabBarController?.navigationController {
-            rootNavi.popToRootViewController(animated: true)
-        }
-        self.navigationController?.tabBarController?.navigationController?.popToRootViewController(animated: true)
-    }
+//    @objc
+//    private func touchupLogoutButton() {
+//        if let rootNavi = self.navigationController?.tabBarController?.navigationController {
+//            rootNavi.popToRootViewController(animated: true)
+//        }
+//        self.navigationController?.tabBarController?.navigationController?.popToRootViewController(animated: true)
+//    }
 
 

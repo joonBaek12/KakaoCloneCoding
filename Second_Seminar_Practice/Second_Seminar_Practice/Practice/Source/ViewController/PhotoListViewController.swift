@@ -16,7 +16,7 @@ final class PhotoListViewController: UIViewController {
     
     //MARK: - Lazy Components
     
-    private lazy var photoListCollectonView: uicollectionview = {
+    private lazy var photoListCollectonView: UICollectionView = {
         let layout = UICollectionViewFlowLayout().then {
             $0.scrollDirection = .vertical
         }
@@ -32,8 +32,41 @@ final class PhotoListViewController: UIViewController {
     
     //MARK: - Variables
     
-    let albumImageNames: [String] = []
+    let albumImageNames: [String] =
+    [
+        "soptAppIcon1",
+        "soptAppIcon2",
+        "soptAppIcon3",
+        "soptAppIcon4",
+        "soptAppIcon5",
+        "soptAppIcon6",
+        "soptAppIcon7",
+        "soptAppIcon1",
+        "soptAppIcon2",
+        "soptAppIcon3",
+        "soptAppIcon4",
+        "soptAppIcon5",
+        "soptAppIcon6",
+        "soptAppIcon7",
+        "soptAppIcon1",
+        "soptAppIcon2",
+        "soptAppIcon3",
+        "soptAppIcon4",
+        "soptAppIcon5",
+        "soptAppIcon6",
+        "soptAppIcon7",
+        "soptAppIcon1",
+        "soptAppIcon2",
+        "soptAppIcon3",
+        "soptAppIcon4",
+        "soptAppIcon5",
+        "soptAppIcon6",
+        "soptAppIcon7"
+
+    ]
     
+    var selectedIndex: Int?
+        
     //MARK: - LifeCycles
     
     override func viewDidLoad() {
@@ -51,9 +84,16 @@ extension PhotoListViewController {
     //MARK: - Layout Helpers
     
     private func layout() {
-        view.add()
+        view.add(photoListCollectonView)
         
         let width = (UIScreen.main.bounds.width)/3
+        
+        photoListCollectonView.snp.makeConstraints {
+            $0.top.equalTo(self.view.safeAreaLayoutGuide)
+            $0.bottom.equalToSuperview().offset(-20)
+            $0.height.equalTo(0)
+            $0.leading.trailing.equalToSuperview()
+        }
         
         
     }
@@ -61,7 +101,9 @@ extension PhotoListViewController {
     //MARK:  - General Helpers
     
     private func register() {
-        
+        photoListCollectonView.register(
+            PhotoListCollectionViewCell.self, forCellWithReuseIdentifier: PhotoListCollectionViewCell.indentifier
+        )
     }
     
     private func configDelegate() {
@@ -75,35 +117,44 @@ extension PhotoListViewController {
 extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        <#code#>
+        let width = (UIScreen.main.bounds.width)/3
+        return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        <#code#>
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        <#code#>
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        <#code#>
+        UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
 
 //MARK: - UICollectionViewDataSource
 extension PhotoListViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return 28
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let photoCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: PhotoListCollectionViewCell.identifier, for: indexPath) as? PhotoListCollectionViewCell else {return UICollectionViewCell()}
+        
+        photoCell.databind(
+            albumImage: albumImageNames[indexPath.item%28]
+        )
+        
+        return photoCell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        <#code#>
+//    }
 }
 
         
