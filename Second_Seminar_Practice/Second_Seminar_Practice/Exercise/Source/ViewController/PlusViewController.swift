@@ -72,12 +72,12 @@ class PlusViewController: UIViewController {
         $0.backgroundColor = .systemGray
     }
     
-    private let logoutButton = UIButton().then {
-        $0.setTitle("로그아웃", for: .normal)
-        $0.setTitleColor(.black, for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 10, weight: .black)
-        $0.addTarget(self, action: #selector(touchupLogoutButton), for: .touchUpInside)
-    }
+//    private let logoutButton = UIButton().then {
+//        $0.setTitle("로그아웃", for: .normal)
+//        $0.setTitleColor(.black, for: .normal)
+//        $0.titleLabel?.font = .systemFont(ofSize: 10, weight: .black)
+//        $0.addTarget(self, action: #selector(touchupLogoutButton), for: .touchUpInside)
+//    }
     
     //MARK: - Variables
     
@@ -142,7 +142,7 @@ extension PlusViewController{
         view.adds(
             [
                 plusCollectionView,
-                logoutButton,
+//                logoutButton,
                 plusContainerView,
                 profileContainerView,
                 profileLineView
@@ -223,12 +223,12 @@ extension PlusViewController{
         
         
         
-        logoutButton.snp.makeConstraints {
-            $0.top.equalTo(self.plusCollectionView).offset(30)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(40)
-            $0.height.equalTo(20)
-        }
+//        logoutButton.snp.makeConstraints {
+//            $0.top.equalTo(self.plusCollectionView).offset(30)
+//            $0.centerX.equalToSuperview()
+//            $0.width.equalTo(40)
+//            $0.height.equalTo(20)
+//        }
     }
 
 // MARK: - GeneralHelpers

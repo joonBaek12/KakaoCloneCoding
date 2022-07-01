@@ -58,7 +58,7 @@ extension PlusTabCollectionViewCell {
             ]
         )
         
-        let width = (UIScreen.main.bounds.width - 19*5)/5
+        let width = (UIScreen.main.bounds.width - 19*5)/4
         buttonImageContainerView.add(buttonImageView)
         buttonImageContainerView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(19)

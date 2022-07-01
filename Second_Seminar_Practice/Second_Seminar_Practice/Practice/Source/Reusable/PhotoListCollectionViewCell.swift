@@ -20,7 +20,7 @@ final class PhotoListCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Variables
     
-    static let indentifier = "PhotoListCollectionViewCell"
+    static let identifier = "PhotoListCollectionViewCell"
     
     //MARK: - LifeCycles
     
@@ -33,6 +33,7 @@ final class PhotoListCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
 //MARK:  - Extentions
 
 extension PhotoListCollectionViewCell {
@@ -40,9 +41,10 @@ extension PhotoListCollectionViewCell {
     //MARK: - Layout Helpers
     
     private func layout() {
+        backgroundColor = .systemBlue
         contentView.add(albumImageView)
         
-        let width = (UIScreen.main.bounds.width)/3
+        let width = (UIScreen.main.bounds.width/3)
         
     }
     
@@ -50,5 +52,16 @@ extension PhotoListCollectionViewCell {
     
     func databind(albumImage:String) {
         albumImageView.image = UIImage(named: albumImage)
+    }
+    
+    func changeBackground(isSelected: Bool) {
+        if isSelected{
+            backgroundColor = .orange
+            contentView.backgroundColor = .red
+        }
+        else {
+            backgroundColor = .clear
+            contentView.backgroundColor = .clear
+        }
     }
 }

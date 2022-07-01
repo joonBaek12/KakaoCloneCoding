@@ -57,17 +57,15 @@ extension MusicPracticeViewController {
     //MARK: - Layout Helpers
     
     private func layout() {
-        //        view.backgroundColor = .white
         view.add(musicCollectionView)
         
-        let width = (UIScreen.main.bounds.width - 9*2 - 3) / 2 + 34 //34?
+        let width = (UIScreen.main.bounds.width - 9*2 - 3) / 2
         
         musicCollectionView.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview()
             $0.height.equalTo(0)
-            $0.leading.trailing.equalToSuperview()//왜 두번?
         }
     }
     
