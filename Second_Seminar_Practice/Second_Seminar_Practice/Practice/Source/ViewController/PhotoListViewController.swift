@@ -23,7 +23,7 @@ final class PhotoListViewController: UIViewController {
         
         let collectionView = UICollectionView(frame:  .zero, collectionViewLayout: layout).then {
             $0.translatesAutoresizingMaskIntoConstraints = false
-            $0.isScrollEnabled = false
+            $0.isScrollEnabled = true
             $0.showsVerticalScrollIndicator = false
             $0.backgroundColor = .clear
         }
@@ -35,30 +35,14 @@ final class PhotoListViewController: UIViewController {
     let albumImageNames: [String] =
     [
         "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1",
-        "musicAlbum1"
-
+        "musicAlbum2",
+        "musicAlbum3",
+        "musicAlbum4"
     ]
     
-    var selectedIndex: [Bool] = Array(repeating: false, count: 21)
+    var selectedPhoto: [Bool] = Array(repeating: false, count: 21)
+    
+    var countNumber: [Bool] = Array(repeating: false, count: 21)
         
     //MARK: - LifeCycles
     
@@ -80,14 +64,13 @@ extension PhotoListViewController {
     private func layout() {
         view.add(photoListCollectonView)
         
-        let width = (UIScreen.main.bounds.width)/3
+        let width = (UIScreen.main.bounds.width - 4)/3
         
         photoListCollectonView.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
-            $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(-20)
             $0.height.equalTo(0)
-
+            $0.leading.trailing.equalToSuperview()
         }
         
         
@@ -112,7 +95,7 @@ extension PhotoListViewController {
 extension PhotoListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width-4)/3
+        let width = (UIScreen.main.bounds.width - 4)/3
         return CGSize(width: width, height: width)
     }
     
@@ -142,16 +125,17 @@ extension PhotoListViewController: UICollectionViewDataSource {
                 as? PhotoListCollectionViewCell else {return UICollectionViewCell()}
         
         photoCell.databind(
-            albumImage: albumImageNames[indexPath.item%3]
+            albumImage: albumImageNames[indexPath.item%4]
         )
         
-        photoCell.changeBackground(isSelected: selectedIndex[indexPath.item])
-        
+//        photoCell.changeBackground(isSelected: selectedPhoto[indexPath.item])
+//
+        photoCell.countPhoto(isSelected: countNumber[indexPath.item])
         return photoCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedIndex[indexPath.item].toggle()
+        selectedPhoto[indexPath.item].toggle()
         collectionView.reloadData()
     }
 }

@@ -110,7 +110,7 @@ extension AppListCollectionViewCell {
     
     //MARK: - General Helpers
     func databind(appImage: String, appTitle: String, appDescription:String) {
-        appImageView.image = UIImage(named:  appImage)
+        appImageView.image = UIImage(named: appImage)
         titleLabel.text = appTitle
         descriptionLabel.text = appDescription
     }

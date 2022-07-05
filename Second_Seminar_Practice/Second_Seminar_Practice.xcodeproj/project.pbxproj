@@ -278,8 +278,8 @@
 				3739D8A3285484E600ACD3CC /* ScrollViewPracticeViewController.swift */,
 				3739D8A528548E5E00ACD3CC /* CollectionViewPracticeViewController.swift */,
 				3739D8AD2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift */,
-				37F047712865C5820031B0D3 /* AppListViewController.swift */,
 				37F0476B285F03C40031B0D3 /* MusicPracticeViewController.swift */,
+				37F047712865C5820031B0D3 /* AppListViewController.swift */,
 				37F047772869FC5D0031B0D3 /* PhotoListViewController.swift */,
 			);
 			path = ViewController;

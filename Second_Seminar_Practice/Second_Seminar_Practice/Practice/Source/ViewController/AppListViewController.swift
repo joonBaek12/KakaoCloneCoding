@@ -154,7 +154,6 @@ extension AppListViewController: UICollectionViewDataSource {
         appCell.databind(appImage: serviceImageNames[indexPath.item], appTitle: serviceNames[indexPath.item], appDescription: serviceDescription[indexPath.item]
         )
         
-        
         appCell.changeBackground(isSelected: selectedList[indexPath.item])
         
         
