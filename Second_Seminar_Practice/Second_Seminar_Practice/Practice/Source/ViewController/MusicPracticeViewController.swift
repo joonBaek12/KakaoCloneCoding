@@ -47,6 +47,8 @@ final class MusicPracticeViewController: UIViewController {
         register()
         configDelegate()
         layout()
+        
+        print (selectedIndex)
     }
 }
 
@@ -135,6 +137,7 @@ extension MusicPracticeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndex = indexPath.item
         collectionView.reloadData()
+        print(selectedIndex)
     }
 }
 

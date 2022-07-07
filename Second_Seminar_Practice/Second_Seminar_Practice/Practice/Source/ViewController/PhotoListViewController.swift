@@ -38,12 +38,11 @@ final class PhotoListViewController: UIViewController {
         "musicAlbum2",
         "musicAlbum3",
         "musicAlbum4"
+        
     ]
     
-    var selectedPhoto: [Bool] = Array(repeating: false, count: 21)
+    var selectedPhoto: [Int] = Array(repeating: 0, count: 21)//버튼이 눌린것을 저장
     
-    var countNumber: [Bool] = Array(repeating: false, count: 21)
-        
     //MARK: - LifeCycles
     
     override func viewDidLoad() {
@@ -52,13 +51,15 @@ final class PhotoListViewController: UIViewController {
         register()
         configDelegate()
         layout()
+        
+        print(selectedPhoto)
     }
 }
 
 //MARK: - Extensions
 
 extension PhotoListViewController {
-      
+    
     //MARK: - Layout Helpers
     
     private func layout() {
@@ -124,24 +125,29 @@ extension PhotoListViewController: UICollectionViewDataSource {
             withReuseIdentifier: PhotoListCollectionViewCell.identifier, for: indexPath)
                 as? PhotoListCollectionViewCell else {return UICollectionViewCell()}
         
-        photoCell.databind(
-            albumImage: albumImageNames[indexPath.item%4]
-        )
+        if selectedPhoto == indexPath.item {
+            photoCell.databind(
+                albumImage: albumImageNames[indexPath.item%4],
+                number: 0
+            )
+        }
+
         
-//        photoCell.changeBackground(isSelected: selectedPhoto[indexPath.item])
-//
-        photoCell.countPhoto(isSelected: countNumber[indexPath.item])
+//                photoCell.changeBackground(isSelected: selectedPhoto[indexPath.item])
+        //
+        photoCell.didSelectItem(selectedPhoto: indexPath.item)
         return photoCell
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedPhoto[indexPath.item].toggle()
+        selectedPhoto[indexPath.item]
         collectionView.reloadData()
+        print (selectedPhoto)
     }
 }
 
-        
-    
 
-    
+
 

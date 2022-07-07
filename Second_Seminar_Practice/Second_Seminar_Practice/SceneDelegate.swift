@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            window.rootViewController = navi
 
             
-            let vc = PhotoListViewController()
+            let vc = MusicPracticeViewController()
             window.rootViewController = vc
 
             window.makeKeyAndVisible()

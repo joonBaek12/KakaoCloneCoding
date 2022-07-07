@@ -65,7 +65,7 @@ extension PhotoListCollectionViewCell {
                 numberLabel
             ]
         )
-
+        
         let width = (UIScreen.main.bounds.width)/3
         albumImageContainerView.adds([albumImageView,numberLabel])
         albumImageContainerView.snp.makeConstraints {
@@ -73,7 +73,7 @@ extension PhotoListCollectionViewCell {
             $0.centerX.equalToSuperview()
             $0.width.height.equalToSuperview()
         }
-
+        
         albumImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -86,33 +86,36 @@ extension PhotoListCollectionViewCell {
     
     //MARK: - General Helpers
     
-    func databind(albumImage: String ) {
+    func databind(albumImage: String, number: Int ) {
         albumImageView.image = UIImage(named: albumImage)
+        numberLabel.text = String(0)
     }
     
-    func countPhoto(isSelected: Bool) {
-        var albumNumber = 0
-
-        func databind(albumNumber: String){
-        }
-        if isSelected {
-            albumNumber += 1
+    func didSelectItem(selectedPhoto: Int){
+//        var totalNumber: [Int] = []
+            
+        if (selectedPhoto == 0){
+                contentView.layer.borderWidth = 1
+                contentView.layer.borderColor = UIColor.orange.cgColor
+            }
+            else{
+                contentView.layer.borderWidth = 1
+                contentView.layer.borderColor = UIColor.blue.cgColor
+            }
+        
     }
-        else {
-            albumNumber -= 1
-        }
     
-//    func changeBackground(isSelected: Bool) {
-
-//        if isSelected {
-//
-////            contentView.layer.borderWidth = 1
-////            contentView.layer.borderColor = UIColor.orange.cgColor
-//        }
-//        else {
-////            contentView.layer.borderWidth = 1
-////            contentView.layer.borderColor = UIColor.blue.cgColor
-//        }//isHidden
-//    }
-    }
+    //    func changeBackground(isSelected: Bool) {
+    //
+    //        if isSelected {
+    //
+    //            contentView.layer.borderWidth = 1
+    //            contentView.layer.borderColor = UIColor.orange.cgColor
+    //        }
+    //        else {
+    //            contentView.layer.borderWidth = 1
+    //            contentView.layer.borderColor = UIColor.blue.cgColor
+    //        }//isHidden
+    //    }
 }
+
