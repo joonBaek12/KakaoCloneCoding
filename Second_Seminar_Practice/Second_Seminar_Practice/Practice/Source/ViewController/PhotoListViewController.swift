@@ -43,6 +43,9 @@ final class PhotoListViewController: UIViewController {
     
     var selectedPhoto: [Int] = Array(repeating: 0, count: 21)//버튼이 눌린것을 저장
     
+    var totalNumber: Int = 0
+    
+    
     //MARK: - LifeCycles
     
     override func viewDidLoad() {
@@ -125,29 +128,33 @@ extension PhotoListViewController: UICollectionViewDataSource {
             withReuseIdentifier: PhotoListCollectionViewCell.identifier, for: indexPath)
                 as? PhotoListCollectionViewCell else {return UICollectionViewCell()}
         
-        if selectedPhoto == indexPath.item {
-            photoCell.databind(
-                albumImage: albumImageNames[indexPath.item%4],
-                number: 0
-            )
-        }
-
-        
-//                photoCell.changeBackground(isSelected: selectedPhoto[indexPath.item])
-        //
-        photoCell.didSelectItem(selectedPhoto: indexPath.item)
+        photoCell.databind(
+            albumImage: albumImageNames[indexPath.item%4],
+            number: selectedPhoto[indexPath.item]
+        )
         return photoCell
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedPhoto[indexPath.item]
+        
+        if selectedPhoto[indexPath.item] == 0 {
+            totalNumber += 1
+            selectedPhoto[indexPath.item] = totalNumber
+        }
+        else {
+            totalNumber -= 1
+            var selectedNumber = selectedPhoto[indexPath.item]
+            
+            for i in 0..<selectedPhoto.count {
+                if selectedNumber < selectedPhoto[i] {
+                    selectedPhoto[i] -= 1
+                } else if selectedNumber == selectedPhoto[i] {
+                    selectedPhoto[i] = 0
+                }
+            }
+        }
         collectionView.reloadData()
-        print (selectedPhoto)
     }
 }
-
-
-
-

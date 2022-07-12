@@ -50,6 +50,9 @@
 		37F047742869C7140031B0D3 /* PlusTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047732869C7140031B0D3 /* PlusTabCollectionViewCell.swift */; };
 		37F047762869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047752869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift */; };
 		37F047782869FC5D0031B0D3 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F047772869FC5D0031B0D3 /* PhotoListViewController.swift */; };
+		37F0477A287A73540031B0D3 /* MemberPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F04779287A73540031B0D3 /* MemberPracticeViewController.swift */; };
+		37F0477C287A73770031B0D3 /* FirstMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0477B287A73770031B0D3 /* FirstMemberCollectionViewCell.swift */; };
+		37F0477E287A76020031B0D3 /* SecondMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0477D287A76020031B0D3 /* SecondMemberCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +98,9 @@
 		37F047732869C7140031B0D3 /* PlusTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusTabCollectionViewCell.swift; sourceTree = "<group>"; };
 		37F047752869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		37F047772869FC5D0031B0D3 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		37F04779287A73540031B0D3 /* MemberPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPracticeViewController.swift; sourceTree = "<group>"; };
+		37F0477B287A73770031B0D3 /* FirstMemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMemberCollectionViewCell.swift; sourceTree = "<group>"; };
+		37F0477D287A76020031B0D3 /* SecondMemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMemberCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,8 @@
 				37F0476D285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift */,
 				37F0476F2865C5650031B0D3 /* AppListCollectionViewCell.swift */,
 				37F047752869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift */,
+				37F0477D287A76020031B0D3 /* SecondMemberCollectionViewCell.swift */,
+				37F0477B287A73770031B0D3 /* FirstMemberCollectionViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 				37F0476B285F03C40031B0D3 /* MusicPracticeViewController.swift */,
 				37F047712865C5820031B0D3 /* AppListViewController.swift */,
 				37F047772869FC5D0031B0D3 /* PhotoListViewController.swift */,
+				37F04779287A73540031B0D3 /* MemberPracticeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -400,6 +409,7 @@
 				37D9F3BD2845BA1200CEC73E /* ChatViewController.swift in Sources */,
 				37F047702865C5650031B0D3 /* AppListCollectionViewCell.swift in Sources */,
 				37D9F3BF2845BA1D00CEC73E /* LibraryViewController.swift in Sources */,
+				37F0477E287A76020031B0D3 /* SecondMemberCollectionViewCell.swift in Sources */,
 				37D9F3C3284644CE00CEC73E /* PlusViewController.swift in Sources */,
 				37D9F3C12845BAD300CEC73E /* TabBarViewController.swift in Sources */,
 				37F047622858D3A60031B0D3 /* CloneServiceListDataModel.swift in Sources */,
@@ -418,11 +428,13 @@
 				3701E2012836098B00597094 /* FirstViewController.swift in Sources */,
 				37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */,
 				37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */,
+				37F0477A287A73540031B0D3 /* MemberPracticeViewController.swift in Sources */,
 				37F047762869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift in Sources */,
 				3713F1922840A545002B9C38 /* SecondViewController.swift in Sources */,
 				37F0476E285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift in Sources */,
 				37F047722865C5820031B0D3 /* AppListViewController.swift in Sources */,
 				37053FB027F1A7A500F5D2F0 /* SceneDelegate.swift in Sources */,
+				37F0477C287A73770031B0D3 /* FirstMemberCollectionViewCell.swift in Sources */,
 				37F04768285A18310031B0D3 /* ProfileDataModel.swift in Sources */,
 				37F047742869C7140031B0D3 /* PlusTabCollectionViewCell.swift in Sources */,
 				37F0476C285F03C40031B0D3 /* MusicPracticeViewController.swift in Sources */,

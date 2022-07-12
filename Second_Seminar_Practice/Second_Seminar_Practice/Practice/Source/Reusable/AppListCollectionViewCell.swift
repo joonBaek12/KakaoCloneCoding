@@ -16,7 +16,7 @@ final class AppListCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Components
     
-    private let appImageContainerView = UIView().then{
+    private let appImageContainerView = UIView().then {
         $0.backgroundColor = .clear
     }
     

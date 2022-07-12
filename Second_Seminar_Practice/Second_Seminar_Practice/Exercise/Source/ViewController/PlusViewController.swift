@@ -15,7 +15,6 @@ import Then
 class PlusViewController: UIViewController {
     
     //MARK: - LazyComponents
-    
     private lazy var plusCollectionView:
     UICollectionView = {
         let layout = UICollectionViewFlowLayout().then {
@@ -80,7 +79,6 @@ class PlusViewController: UIViewController {
 //    }
     
     //MARK: - Variables
-    
     let iconImageNames: [String] = [
         "messageTabIcon",
         "messageTabIcon",
@@ -121,7 +119,6 @@ class PlusViewController: UIViewController {
     ]
     
     //MARK: - LifeCycles
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -132,11 +129,9 @@ class PlusViewController: UIViewController {
 }
 
 //MARK: - Extentions
-
 extension PlusViewController{
     
     //MARK: - LayoutHelpers
-    
     private func layout() {
         
         view.adds(
@@ -231,8 +226,7 @@ extension PlusViewController{
 //        }
     }
 
-// MARK: - GeneralHelpers
-
+    // MARK: - GeneralHelpers
     private func register() {
         plusCollectionView.register(
             PlusTabCollectionViewCell.self, forCellWithReuseIdentifier: PlusTabCollectionViewCell.identifier
@@ -246,7 +240,6 @@ extension PlusViewController{
     }
 
 //MARK: - UICollectionViewDelegateFlowLayout
-
 extension PlusViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -268,7 +261,6 @@ extension PlusViewController: UICollectionViewDelegateFlowLayout {
 }
 
 //MARK: - UICollectionViewDataSource
-
 extension PlusViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 16

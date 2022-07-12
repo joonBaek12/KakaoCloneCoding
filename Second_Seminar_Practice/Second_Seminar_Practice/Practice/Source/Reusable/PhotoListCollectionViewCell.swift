@@ -24,7 +24,7 @@ final class PhotoListCollectionViewCell: UICollectionViewCell {
     
     private let numberLabel = UILabel().then {
         $0.textColor = .blue
-        $0.font = .systemFont(ofSize: 10, weight: .medium)
+        $0.font = .systemFont(ofSize: 11, weight: .bold)
     }
     
     //MARK: - Variables
@@ -46,6 +46,8 @@ final class PhotoListCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         backgroundColor = .clear
         contentView.backgroundColor = .clear
+//        numberLabel.isHidden = true
+//        numberLabel.text = ""
     }
 }
 
@@ -86,36 +88,25 @@ extension PhotoListCollectionViewCell {
     
     //MARK: - General Helpers
     
-    func databind(albumImage: String, number: Int ) {
+    func databind(albumImage: String, number: Int) {
         albumImageView.image = UIImage(named: albumImage)
-        numberLabel.text = String(0)
+        photoSelected(number: number)
+        if number == 0 {
+            numberLabel.isHidden = true
+        } else {
+            numberLabel.isHidden = false
+            numberLabel.text = "\(number)"
+        }
     }
     
-    func didSelectItem(selectedPhoto: Int){
-//        var totalNumber: [Int] = []
-            
-        if (selectedPhoto == 0){
-                contentView.layer.borderWidth = 1
-                contentView.layer.borderColor = UIColor.orange.cgColor
-            }
-            else{
-                contentView.layer.borderWidth = 1
-                contentView.layer.borderColor = UIColor.blue.cgColor
-            }
-        
+    private func photoSelected(number: Int) {
+        if number == 0 {
+            contentView.layer.borderColor = UIColor.clear.cgColor
+            contentView.layer.borderWidth = 1
+        }
+        else {
+            contentView.layer.borderColor = UIColor.systemYellow.cgColor
+            contentView.layer.borderWidth = 1
+        }
     }
-    
-    //    func changeBackground(isSelected: Bool) {
-    //
-    //        if isSelected {
-    //
-    //            contentView.layer.borderWidth = 1
-    //            contentView.layer.borderColor = UIColor.orange.cgColor
-    //        }
-    //        else {
-    //            contentView.layer.borderWidth = 1
-    //            contentView.layer.borderColor = UIColor.blue.cgColor
-    //        }//isHidden
-    //    }
 }
-

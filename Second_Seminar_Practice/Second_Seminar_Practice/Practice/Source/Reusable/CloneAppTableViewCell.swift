@@ -11,7 +11,6 @@ import SnapKit
 import Then
 
 //MARK: - AppTableViewCell
-
 final class CloneAppTableViewCell: UITableViewCell {
 
 //MARK: - Lazy Components
@@ -40,11 +39,9 @@ final class CloneAppTableViewCell: UITableViewCell {
     }
     
     //MARK: - Variables
-    
     static let identifier = "CloneAppTableViewCell"
     
     //MARK: - LifeCycles
-    
     override init(style: UITableViewCell.CellStyle,reuseIdentifier: String?) {
         super.init(style: .default,reuseIdentifier: CloneAppTableViewCell.identifier)
         layout()

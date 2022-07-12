@@ -6,19 +6,15 @@
 //
 
 import UIKit
-
 import SnapKit
 import Then
 
 //MARK: - MyTabViewController
-
 final class MyTabViewController: UIViewController {
     
     //MARK: - LazyComponents
     
-    
     //MARK: - UIComponents
-    
     private let closeButton = UIButton().then {
         $0.setBackgroundImage(UIImage(named: "btnClose"), for: .normal)
         $0.addTarget(self, action: #selector(touchupCloseButton), for: .touchUpInside)
@@ -50,13 +46,9 @@ final class MyTabViewController: UIViewController {
         $0.setBackgroundImage(UIImage(named: "btnKakaoStory"), for: .normal)
     }
     
-    
-    
     //MARK: - Variables
     
-    
     //MARK: - LifeCycles
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray
@@ -66,13 +58,22 @@ final class MyTabViewController: UIViewController {
 }
 
 //MARK: - Extentions
-
 extension MyTabViewController {
     
     //MARK: - LayoutHelpers
     private func layout() {
         
-        view.adds([closeButton, profileImageView, myNameLabel, profileLineView,editButton,kakaoStoryButton,chattingButton])
+        view.adds(
+            [
+                closeButton,
+                profileImageView,
+                myNameLabel,
+                profileLineView,
+                editButton,
+                kakaoStoryButton,
+                chattingButton
+            ]
+        )
         
         closeButton.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(14)
@@ -118,16 +119,13 @@ extension MyTabViewController {
             $0.centerY.equalTo(self.editButton)
             $0.height.equalTo(self.editButton)
         }
-    
     }
+    
     // MARK: - GeneralHelpers
         
     // MARK: - ActionHelpers
-
     @objc
     private func touchupCloseButton() {
         self.dismiss(animated: true, completion: nil)
     }
-
-
 }
