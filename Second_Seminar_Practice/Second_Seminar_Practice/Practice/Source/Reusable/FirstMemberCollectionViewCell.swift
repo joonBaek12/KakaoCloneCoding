@@ -29,7 +29,7 @@ final class FirstMemberCollectionViewCell: UICollectionViewCell {
     }
     
     private let remainingLabel = UILabel().then {
-        $0.textColor = .systemBlue
+        $0.textColor = .cyan
         $0.font = .systemFont(ofSize: 12, weight: .bold)
     }
     
@@ -37,7 +37,7 @@ final class FirstMemberCollectionViewCell: UICollectionViewCell {
         $0.setTitle("매칭하기", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .boldSystemFont(ofSize: 10)
-        $0.backgroundColor = .systemBlue
+        $0.backgroundColor = .cyan
         $0.layer.cornerRadius = 10.0
     }
     

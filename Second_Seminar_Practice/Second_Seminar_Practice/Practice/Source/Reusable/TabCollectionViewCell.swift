@@ -15,7 +15,7 @@ final class TabCollectionViewCell: UICollectionViewCell {
     //MARK: - Components
     
     private let matchedMemberLabel = UILabel().then {
-        $0.font = .systemFont(ofSize: 22, weight: .bold)
+        $0.font = .systemFont(ofSize: 22, weight: .bold)//암거나?
     }
     
     private let underLineView = UIView().then {
@@ -66,20 +66,25 @@ extension TabCollectionViewCell {
             if index == 0 {
                 matchedMemberLabel.text = "매칭회원"
                 matchedMemberLabel.textColor = .black
+                matchedMemberLabel.font = .systemFont(ofSize: 22, weight: .bold)
                 underLineView.backgroundColor = .cyan
+                
             } else {
                 matchedMemberLabel.text = "종료회원"
                 matchedMemberLabel.textColor = .gray
+                matchedMemberLabel.font = .systemFont(ofSize: 22, weight: .regular)
                 underLineView.backgroundColor = .clear
             }
         } else {
             if index == 0 {
                 matchedMemberLabel.text = "매칭회원"
                 matchedMemberLabel.textColor = .gray
+                matchedMemberLabel.font = .systemFont(ofSize: 22, weight: .regular)
                 underLineView.backgroundColor = .clear
             } else {
                 matchedMemberLabel.text = "종료회원"
                 matchedMemberLabel.textColor = .black
+                matchedMemberLabel.font = .systemFont(ofSize: 22, weight: .bold)
                 underLineView.backgroundColor = .cyan
             }
         }

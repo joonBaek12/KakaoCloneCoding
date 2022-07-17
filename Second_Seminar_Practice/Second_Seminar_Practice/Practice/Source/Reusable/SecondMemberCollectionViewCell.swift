@@ -37,7 +37,7 @@ final class SecondMemberCollectionViewCell: UICollectionViewCell {
         $0.setTitle("수강권 발급하기", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .boldSystemFont(ofSize: 10)
-        $0.backgroundColor = .systemBlue
+        $0.backgroundColor = .cyan
         $0.layer.cornerRadius = 10.0
     }
     
