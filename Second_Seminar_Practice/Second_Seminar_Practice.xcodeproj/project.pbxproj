@@ -28,6 +28,8 @@
 		3739D8AC285498BB00ACD3CC /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8AB285498BB00ACD3CC /* AppTableViewCell.swift */; };
 		3739D8AE2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8AD2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift */; };
 		3739D8B02854B47900ACD3CC /* CloneAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */; };
+		37549CE428839CA6006DC434 /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CE328839CA6006DC434 /* TabCollectionViewCell.swift */; };
+		37549CE62883B701006DC434 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CE52883B701006DC434 /* Profile.swift */; };
 		378814A827F2FF8C002FA1BC /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A727F2FF8C002FA1BC /* StackView.storyboard */; };
 		378814AA27F304EA002FA1BC /* ScrollView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A927F304EA002FA1BC /* ScrollView.storyboard */; };
 		379E72022851C55D00555DA5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E72012851C55D00555DA5 /* WelcomeViewController.swift */; };
@@ -76,6 +78,8 @@
 		3739D8AB285498BB00ACD3CC /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		3739D8AD2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneCollectionViewPracticeViewController.swift; sourceTree = "<group>"; };
 		3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneAppTableViewCell.swift; sourceTree = "<group>"; };
+		37549CE328839CA6006DC434 /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
+		37549CE52883B701006DC434 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		378814A727F2FF8C002FA1BC /* StackView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
 		378814A927F304EA002FA1BC /* ScrollView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollView.storyboard; sourceTree = "<group>"; };
 		379E72012851C55D00555DA5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			children = (
 				3739D8A72854985E00ACD3CC /* ServiceListDataModel.swift */,
 				37F047612858D3A60031B0D3 /* CloneServiceListDataModel.swift */,
+				37549CE52883B701006DC434 /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				37F047752869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift */,
 				37F0477D287A76020031B0D3 /* SecondMemberCollectionViewCell.swift */,
 				37F0477B287A73770031B0D3 /* FirstMemberCollectionViewCell.swift */,
+				37549CE328839CA6006DC434 /* TabCollectionViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				37D9F3C12845BAD300CEC73E /* TabBarViewController.swift in Sources */,
 				37F047622858D3A60031B0D3 /* CloneServiceListDataModel.swift in Sources */,
 				37D9F3C728465BD400CEC73E /* HomeViewController.swift in Sources */,
+				37549CE428839CA6006DC434 /* TabCollectionViewCell.swift in Sources */,
 				3739D8AC285498BB00ACD3CC /* AppTableViewCell.swift in Sources */,
 				379E72022851C55D00555DA5 /* WelcomeViewController.swift in Sources */,
 				3739D8A628548E5E00ACD3CC /* CollectionViewPracticeViewController.swift in Sources */,
@@ -427,6 +434,7 @@
 				3739D8AE2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift in Sources */,
 				3701E2012836098B00597094 /* FirstViewController.swift in Sources */,
 				37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */,
+				37549CE62883B701006DC434 /* Profile.swift in Sources */,
 				37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */,
 				37F0477A287A73540031B0D3 /* MemberPracticeViewController.swift in Sources */,
 				37F047762869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift in Sources */,

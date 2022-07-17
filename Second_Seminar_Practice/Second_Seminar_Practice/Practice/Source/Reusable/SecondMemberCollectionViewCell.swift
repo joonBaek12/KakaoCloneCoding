@@ -64,14 +64,16 @@ extension SecondMemberCollectionViewCell {
     //MARK: - Layout Helpers
     private func layout() {
         backgroundColor = .clear
-        contentView.backgroundColor = .systemGray5
-        contentView.adds([
-            memberImageContainerView,
-            nameLabel,
-            infoLabel,
-            remainingLabel,
-            matchButton
-        ]
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 6
+        contentView.adds(
+            [
+                memberImageContainerView,
+                nameLabel,
+                infoLabel,
+                remainingLabel,
+                matchButton
+            ]
         )
         memberImageContainerView.add(memberImageView)
         
@@ -110,12 +112,12 @@ extension SecondMemberCollectionViewCell {
     }
     
     //MARK: - General Helpers
-    func databind(profileImage: String, name: String, gender: String, age: Int , remaning: Int) {
-        memberImageView.image = UIImage(named: profileImage)
-        nameLabel.text = name
-        infoLabel.text = gender; "\(age)"
-        remainingLabel.text = "\(remaning)"
-    }
     
+    func databind(model: Profile) {
+        nameLabel.text = model.name
+        infoLabel.text = "(\(model.age)세, \(model.gender))"
+        memberImageView.image = UIImage(named: model.profileImage)
+        remainingLabel.text = "잔여 \(model.remaining)회"
+    }
 }
 

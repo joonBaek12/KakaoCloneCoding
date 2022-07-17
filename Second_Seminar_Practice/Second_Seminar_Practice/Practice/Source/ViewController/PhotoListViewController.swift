@@ -135,8 +135,6 @@ extension PhotoListViewController: UICollectionViewDataSource {
         return photoCell
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if selectedPhoto[indexPath.item] == 0 {

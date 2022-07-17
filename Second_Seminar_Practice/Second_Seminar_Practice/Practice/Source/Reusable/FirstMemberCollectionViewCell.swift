@@ -47,13 +47,12 @@ final class FirstMemberCollectionViewCell: UICollectionViewCell {
     //MARK: - LifeCycles
     override init(frame: CGRect) {
         super.init(frame: frame)
+        layout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-
 }
 
 //MARK: - Extentions
@@ -62,15 +61,18 @@ extension FirstMemberCollectionViewCell {
     //MARK: - Layout Helpers
     private func layout() {
         backgroundColor = .clear
-        contentView.backgroundColor = .systemGray5
-        contentView.adds([
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 6
+        contentView.adds(
+            [
             memberImageContainerView,
             nameLabel,
             infoLabel,
             remainingLabel,
             matchButton
-        ]
+            ]
         )
+        
         memberImageContainerView.add(memberImageView)
         
         memberImageContainerView.snp.makeConstraints {
@@ -109,9 +111,9 @@ extension FirstMemberCollectionViewCell {
     //MARK: - General Helpers
     func databind(name: String, gender: String, age: Int, profileImage: String, remaning: Int) {
         nameLabel.text = name
-        infoLabel.text = gender; "\(age)"
+        infoLabel.text = "(\(String(age))세, \(gender))"
         memberImageView.image = UIImage(named: profileImage)
-        remainingLabel.text = "\(remaning)"
+        remainingLabel.text = "잔여 \(remaning)회"
     }
     
 }
