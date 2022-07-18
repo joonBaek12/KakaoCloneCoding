@@ -11,11 +11,9 @@ import SnapKit
 import Then
 
 //MARK: - TabBarViewController
-
 class HomeViewController: UIViewController {
     
     //MARK: - LazyComponents
-    
     
     //MARK: - UIComponents
     
@@ -43,11 +41,8 @@ class HomeViewController: UIViewController {
             for: .touchUpInside
         )
     }
-    
-    
-    
+
     //MARK: - Variables
-    
     
     //MARK: - LifeCycles
     override func viewDidLoad() {
@@ -55,20 +50,13 @@ class HomeViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         layout()
         addGesture()
-        
     }
-    
-    
-    
 }
 
-
 //MARK: - Extentions
-
 extension HomeViewController {
     
     //MARK: - LayoutHelpers
-    
     private func layout() {
         view.adds(
             [friendLabel,
@@ -100,7 +88,6 @@ extension HomeViewController {
     
     
     //MARK: - ActionHelpers
-    
     private func addGesture() {
         let gesture = UITapGestureRecognizer()
         gesture.addTarget(self, action: #selector(touchupProfileButton))

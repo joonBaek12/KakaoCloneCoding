@@ -325,6 +325,19 @@ extension MemberPracticeViewController {
     }
 }
 
+    //MARK: - ActionHelpers
+//    @objc private func handlePanGesture(gesture: UIPanGestureRecognizer) {
+//        if gesture.state == .began {
+//
+//        } else if gesture.state == .changed {
+//            let translation = gesture.translation(in: self.view)
+//            imageView.transform = CGAffineTransform(translationX: translation.x, y: 0)
+//        } else if gesture.state == .ended {
+//
+//        }
+//}
+    
+
 //MARK: - UICollectionViewDelegateFlowLayout
 extension MemberPracticeViewController: UICollectionViewDelegateFlowLayout {
     
