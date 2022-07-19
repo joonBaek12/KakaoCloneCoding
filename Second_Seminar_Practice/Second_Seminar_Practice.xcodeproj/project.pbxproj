@@ -30,6 +30,8 @@
 		3739D8B02854B47900ACD3CC /* CloneAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */; };
 		37549CE428839CA6006DC434 /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CE328839CA6006DC434 /* TabCollectionViewCell.swift */; };
 		37549CE62883B701006DC434 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CE52883B701006DC434 /* Profile.swift */; };
+		37549CEE28859F19006DC434 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CED28859F19006DC434 /* LoginController.swift */; };
+		37549CF02886A5B4006DC434 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CEF2886A5B4006DC434 /* Extensions.swift */; };
 		378814A827F2FF8C002FA1BC /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A727F2FF8C002FA1BC /* StackView.storyboard */; };
 		378814AA27F304EA002FA1BC /* ScrollView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A927F304EA002FA1BC /* ScrollView.storyboard */; };
 		379E72022851C55D00555DA5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E72012851C55D00555DA5 /* WelcomeViewController.swift */; };
@@ -80,6 +82,8 @@
 		3739D8AF2854B47900ACD3CC /* CloneAppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneAppTableViewCell.swift; sourceTree = "<group>"; };
 		37549CE328839CA6006DC434 /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
 		37549CE52883B701006DC434 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		37549CED28859F19006DC434 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Second_Seminar_Practice/Practice/Source/Model/LoginController.swift; sourceTree = SOURCE_ROOT; };
+		37549CEF2886A5B4006DC434 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		378814A727F2FF8C002FA1BC /* StackView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
 		378814A927F304EA002FA1BC /* ScrollView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollView.storyboard; sourceTree = "<group>"; };
 		379E72012851C55D00555DA5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 		37053FAC27F1A7A400F5D2F0 /* Second_Seminar_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				37549CE728859E6D006DC434 /* UberTutorial */,
 				3757BB25284B2AC000AFE0A7 /* Global */,
 				3757BB1C284B29F400AFE0A7 /* Exercise */,
 				3757BB1B284B29E100AFE0A7 /* Practice */,
@@ -173,6 +178,58 @@
 				37549CE328839CA6006DC434 /* TabCollectionViewCell.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		37549CE728859E6D006DC434 /* UberTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				37549CEC28859EBC006DC434 /* Modal */,
+				37549CEB28859EB7006DC434 /* View */,
+				37549CEA28859EB7006DC434 /* Controller */,
+				37549CE928859EB6006DC434 /* Service */,
+				37549CE828859EA7006DC434 /* Utils */,
+			);
+			path = UberTutorial;
+			sourceTree = "<group>";
+		};
+		37549CE828859EA7006DC434 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				37549CEF2886A5B4006DC434 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		37549CE928859EB6006DC434 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		37549CEA28859EB7006DC434 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37549CED28859F19006DC434 /* LoginController.swift */,
+			);
+			name = Controller;
+			path = "New Group1/Controller";
+			sourceTree = "<group>";
+		};
+		37549CEB28859EB7006DC434 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = "New Group1/New Group/View";
+			sourceTree = "<group>";
+		};
+		37549CEC28859EBC006DC434 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modal;
+			path = "New Group1/New Group/New Group/Modal";
 			sourceTree = "<group>";
 		};
 		3757BB19284B29CD00AFE0A7 /* Resource */ = {
@@ -431,6 +488,7 @@
 				3739D8B02854B47900ACD3CC /* CloneAppTableViewCell.swift in Sources */,
 				37053FAE27F1A7A500F5D2F0 /* AppDelegate.swift in Sources */,
 				37D9F3C5284644D900CEC73E /* ShoppingViewController.swift in Sources */,
+				37549CEE28859F19006DC434 /* LoginController.swift in Sources */,
 				3739D8AE2854B0F300ACD3CC /* CloneCollectionViewPracticeViewController.swift in Sources */,
 				3701E2012836098B00597094 /* FirstViewController.swift in Sources */,
 				37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */,
@@ -445,6 +503,7 @@
 				37F0477C287A73770031B0D3 /* FirstMemberCollectionViewCell.swift in Sources */,
 				37F04768285A18310031B0D3 /* ProfileDataModel.swift in Sources */,
 				37F047742869C7140031B0D3 /* PlusTabCollectionViewCell.swift in Sources */,
+				37549CF02886A5B4006DC434 /* Extensions.swift in Sources */,
 				37F0476C285F03C40031B0D3 /* MusicPracticeViewController.swift in Sources */,
 				37F047782869FC5D0031B0D3 /* PhotoListViewController.swift in Sources */,
 				37F047642859F66D0031B0D3 /* FriendViewController.swift in Sources */,
