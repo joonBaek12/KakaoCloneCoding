@@ -249,7 +249,7 @@ final class MemberPracticeViewController: UIViewController {
     }
 }
 
-//MARK: - Extentions
+//MARK: - Extensions
 
 extension MemberPracticeViewController {
     
