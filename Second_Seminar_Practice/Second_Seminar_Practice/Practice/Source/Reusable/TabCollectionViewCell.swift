@@ -61,7 +61,7 @@ extension TabCollectionViewCell {
     }
     
     //MARK: - General Helpers
-    func databind(index: Int, isMatched: Bool){
+    func databind(index: Int, isMatched: Bool) {
         if isMatched {
             if index == 0 {
                 matchedMemberLabel.text = "매칭회원"

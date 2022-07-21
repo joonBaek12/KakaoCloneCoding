@@ -34,6 +34,8 @@
 		37549CF02886A5B4006DC434 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CEF2886A5B4006DC434 /* Extensions.swift */; };
 		37549CF228883ED1006DC434 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CF128883ED1006DC434 /* MyPageViewController.swift */; };
 		37549CF428883EFD006DC434 /* MyPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CF328883EFD006DC434 /* MyPageCollectionViewCell.swift */; };
+		37549CF62888EDB5006DC434 /* MyPageTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CF52888EDB5006DC434 /* MyPageTabCollectionViewCell.swift */; };
+		37549CF82889758D006DC434 /* NewCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37549CF72889758D006DC434 /* NewCategoryCollectionViewCell.swift */; };
 		378814A827F2FF8C002FA1BC /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A727F2FF8C002FA1BC /* StackView.storyboard */; };
 		378814AA27F304EA002FA1BC /* ScrollView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A927F304EA002FA1BC /* ScrollView.storyboard */; };
 		379E72022851C55D00555DA5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E72012851C55D00555DA5 /* WelcomeViewController.swift */; };
@@ -88,6 +90,8 @@
 		37549CEF2886A5B4006DC434 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		37549CF128883ED1006DC434 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		37549CF328883EFD006DC434 /* MyPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		37549CF52888EDB5006DC434 /* MyPageTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTabCollectionViewCell.swift; sourceTree = "<group>"; };
+		37549CF72889758D006DC434 /* NewCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		378814A727F2FF8C002FA1BC /* StackView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
 		378814A927F304EA002FA1BC /* ScrollView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollView.storyboard; sourceTree = "<group>"; };
 		379E72012851C55D00555DA5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				37F0477B287A73770031B0D3 /* FirstMemberCollectionViewCell.swift */,
 				37549CE328839CA6006DC434 /* TabCollectionViewCell.swift */,
 				37549CF328883EFD006DC434 /* MyPageCollectionViewCell.swift */,
+				37549CF72889758D006DC434 /* NewCategoryCollectionViewCell.swift */,
+				37549CF52888EDB5006DC434 /* MyPageTabCollectionViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -503,9 +509,11 @@
 				37549CE62883B701006DC434 /* Profile.swift in Sources */,
 				37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */,
 				37F0477A287A73540031B0D3 /* MemberPracticeViewController.swift in Sources */,
+				37549CF82889758D006DC434 /* NewCategoryCollectionViewCell.swift in Sources */,
 				37F047762869FC2F0031B0D3 /* PhotoListCollectionViewCell.swift in Sources */,
 				3713F1922840A545002B9C38 /* SecondViewController.swift in Sources */,
 				37F0476E285F08420031B0D3 /* MusicPracticeCollectionViewCell.swift in Sources */,
+				37549CF62888EDB5006DC434 /* MyPageTabCollectionViewCell.swift in Sources */,
 				37F047722865C5820031B0D3 /* AppListViewController.swift in Sources */,
 				37053FB027F1A7A500F5D2F0 /* SceneDelegate.swift in Sources */,
 				37F0477C287A73770031B0D3 /* FirstMemberCollectionViewCell.swift in Sources */,

@@ -15,7 +15,6 @@ import Then
 final class MemberPracticeViewController: UIViewController {
     
     //MARK: - Lazy Components
-    
     private lazy var tabCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout().then {
             $0.scrollDirection = .horizontal
@@ -44,6 +43,7 @@ final class MemberPracticeViewController: UIViewController {
         
         return collectionView
     }()
+    
     //MARK: - UIComponents
     private let countMemberLabel = UILabel().then {
         $0.text = "매칭회원 회원 3명"
@@ -51,7 +51,6 @@ final class MemberPracticeViewController: UIViewController {
     }
     
     //MARK: - Variables
-    
     var isMatched: Bool = true 
     
     var matchedList: [Profile] = [
