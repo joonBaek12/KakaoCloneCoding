@@ -51,7 +51,7 @@ final class MemberPracticeViewController: UIViewController {
     }
     
     //MARK: - Variables
-    var isMatched: Bool = true 
+    var isMatched: Bool = true
     
     var matchedList: [Profile] = [
         Profile(

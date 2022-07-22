@@ -39,6 +39,7 @@
 		378814A827F2FF8C002FA1BC /* StackView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A727F2FF8C002FA1BC /* StackView.storyboard */; };
 		378814AA27F304EA002FA1BC /* ScrollView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378814A927F304EA002FA1BC /* ScrollView.storyboard */; };
 		379E72022851C55D00555DA5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E72012851C55D00555DA5 /* WelcomeViewController.swift */; };
+		37B4FE49288ACBF70094A35A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4FE48288ACBF70094A35A /* HomeController.swift */; };
 		37D9F3BD2845BA1200CEC73E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9F3BC2845BA1200CEC73E /* ChatViewController.swift */; };
 		37D9F3BF2845BA1D00CEC73E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9F3BE2845BA1D00CEC73E /* LibraryViewController.swift */; };
 		37D9F3C12845BAD300CEC73E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9F3C02845BAD300CEC73E /* TabBarViewController.swift */; };
@@ -95,6 +96,7 @@
 		378814A727F2FF8C002FA1BC /* StackView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackView.storyboard; sourceTree = "<group>"; };
 		378814A927F304EA002FA1BC /* ScrollView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollView.storyboard; sourceTree = "<group>"; };
 		379E72012851C55D00555DA5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		37B4FE48288ACBF70094A35A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		37D9F3BC2845BA1200CEC73E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		37D9F3BE2845BA1D00CEC73E /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		37D9F3C02845BAD300CEC73E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		37053FAC27F1A7A400F5D2F0 /* Second_Seminar_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				37549CF9288AC9F0006DC434 /* Youtube */,
 				37549CE728859E6D006DC434 /* UberTutorial */,
 				3757BB25284B2AC000AFE0A7 /* Global */,
 				3757BB1C284B29F400AFE0A7 /* Exercise */,
@@ -241,6 +244,14 @@
 			);
 			name = Modal;
 			path = "New Group1/New Group/New Group/Modal";
+			sourceTree = "<group>";
+		};
+		37549CF9288AC9F0006DC434 /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				37B4FE48288ACBF70094A35A /* HomeController.swift */,
+			);
+			path = Youtube;
 			sourceTree = "<group>";
 		};
 		3757BB19284B29CD00AFE0A7 /* Resource */ = {
@@ -507,6 +518,7 @@
 				3701E2012836098B00597094 /* FirstViewController.swift in Sources */,
 				37E5DE41284A4544000E8FA9 /* MyTabViewController.swift in Sources */,
 				37549CE62883B701006DC434 /* Profile.swift in Sources */,
+				37B4FE49288ACBF70094A35A /* HomeController.swift in Sources */,
 				37F047662859F9C00031B0D3 /* FriendTableViewCell.swift in Sources */,
 				37F0477A287A73540031B0D3 /* MemberPracticeViewController.swift in Sources */,
 				37549CF82889758D006DC434 /* NewCategoryCollectionViewCell.swift in Sources */,
