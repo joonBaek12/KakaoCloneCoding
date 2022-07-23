@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            window.rootViewController = navi
 
             
-            let vc = LoginController()
+            let vc = MemberPracticeViewController()
             window.rootViewController = vc
 
             window.makeKeyAndVisible()

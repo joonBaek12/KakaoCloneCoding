@@ -245,6 +245,16 @@ final class MemberPracticeViewController: UIViewController {
         configDelegate()
         layout()
         relayout()
+        
+        //        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
+        //        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        //        self.view.addGestureRecognizer(swipeRight)
+        //
+        //        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
+        //        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        //        self.view.addGestureRecognizer(swipeLeft)
+        
+
     }
 }
 
@@ -322,9 +332,8 @@ extension MemberPracticeViewController {
         tabCollectionView.delegate = self
         tabCollectionView.dataSource = self
     }
-}
-
-    //MARK: - ActionHelpers
+    
+//MARK: - ActionHelpers
 //    @objc private func handlePanGesture(gesture: UIPanGestureRecognizer) {
 //        if gesture.state == .began {
 //
@@ -336,6 +345,23 @@ extension MemberPracticeViewController {
 //        }
 //}
     
+    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        leftSwipe.direction = .left
+        rightSwipe.direction = .right
+        self.view.addGestureRecognizer(leftSwipe)
+        self.view.addGestureRecognizer(rightSwipe)
+        
+        if sender.direction == .left {
+            self.tabBarController!.selectedIndex += 1
+        }
+        if sender.direction == .right {
+            self.tabBarController!.selectedIndex -= 1
+        }
+    }
+}
 
 //MARK: - UICollectionViewDelegateFlowLayout
 extension MemberPracticeViewController: UICollectionViewDelegateFlowLayout {

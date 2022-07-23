@@ -10,15 +10,15 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+//    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.makeKeyAndVisible()
+//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        window?.makeKeyAndVisible()
         
-        let layout = UICollectionViewFlowLayout()
+//        let layout = UICollectionViewFlowLayout()
         
-        window?.rootViewController = UINavigationController(rootViewController: HomeController(CollectionViewLayout: layout))
+//        window?.rootViewController = UINavigationController(rootViewController: HomeController(CollectionViewLayout: layout))
         
         return true
     }

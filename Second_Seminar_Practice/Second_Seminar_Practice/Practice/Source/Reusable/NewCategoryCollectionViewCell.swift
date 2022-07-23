@@ -10,8 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
-//MARK: -NewCategoryCollectionViewCell
-class NewCategoryCollectionViewCell: UICollectionViewCell {
+//MARK: - NewCategoryCollectionViewCell
+final class NewCategoryCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Components
     private let categoryImageContainerView = UIView().then {
@@ -89,6 +89,7 @@ extension NewCategoryCollectionViewCell {
         }
     }
     //MARK: - General Helpers
-    
-    
+    func databind(categoryList: String) {
+        nameLabel.text = categoryList
+    }
 }
