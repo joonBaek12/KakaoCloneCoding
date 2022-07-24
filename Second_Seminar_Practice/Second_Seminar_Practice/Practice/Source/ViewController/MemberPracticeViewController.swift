@@ -245,16 +245,6 @@ final class MemberPracticeViewController: UIViewController {
         configDelegate()
         layout()
         relayout()
-        
-        //        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
-        //        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
-        //        self.view.addGestureRecognizer(swipeRight)
-        //
-        //        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
-        //        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-        //        self.view.addGestureRecognizer(swipeLeft)
-        
-
     }
 }
 
@@ -313,11 +303,23 @@ extension MemberPracticeViewController {
                 $0.height.equalTo(count * 75  + (count-1) * 16 + 40)
             }
         }
-    }
+    }//질문하기
     
     //MARK: - General Helpers
     private func config() {
         countMemberLabel.text = "매칭 회원 \(matchedList.count)명"
+        configGesture()
+    }
+    
+    private func configGesture() {
+        let leftSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        let rightSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+            
+        leftSwipeGestureRecognizer.direction = .left
+        rightSwipeGestureRecognizer.direction = .right
+
+        view.addGestureRecognizer(leftSwipeGestureRecognizer)
+        view.addGestureRecognizer(rightSwipeGestureRecognizer)
     }
     
     private func register() {
@@ -334,31 +336,21 @@ extension MemberPracticeViewController {
     }
     
 //MARK: - ActionHelpers
-//    @objc private func handlePanGesture(gesture: UIPanGestureRecognizer) {
-//        if gesture.state == .began {
-//
-//        } else if gesture.state == .changed {
-//            let translation = gesture.translation(in: self.view)
-//            imageView.transform = CGAffineTransform(translationX: translation.x, y: 0)
-//        } else if gesture.state == .ended {
-//
-//        }
-//}
-    
-    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
-        
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
-        leftSwipe.direction = .left
-        rightSwipe.direction = .right
-        self.view.addGestureRecognizer(leftSwipe)
-        self.view.addGestureRecognizer(rightSwipe)
-        
-        if sender.direction == .left {
-            self.tabBarController!.selectedIndex += 1
+
+    @objc
+    func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .left) {
+            isMatched = false
+            tabCollectionView.reloadData()
+            memberCollectionView.reloadData()
+            countMemberLabel.text = "매칭이 종료된 회원 \(unmatchedList.count)명"
         }
-        if sender.direction == .right {
-            self.tabBarController!.selectedIndex -= 1
+            
+        if (sender.direction == .right) {
+            isMatched = true
+            tabCollectionView.reloadData()
+            memberCollectionView.reloadData()
+            countMemberLabel.text = "매칭 회원 \(matchedList.count)명"
         }
     }
 }

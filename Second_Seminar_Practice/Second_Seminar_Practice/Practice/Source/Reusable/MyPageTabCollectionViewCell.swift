@@ -15,7 +15,7 @@ final class MyPageTabCollectionViewCell: UICollectionViewCell {
     
     //MARK: - components
     private let tabImageView = UIImageView().then {
-        $0.image = UIImage(named: <#T##String#>)
+        $0.image = UIImage(named: "")
     }
     private let underLineView = UIView().then {
         $0.backgroundColor = .clear
@@ -61,7 +61,28 @@ extension MyPageTabCollectionViewCell {
     }
     
     //MARK: - General Helpers
-    func databind(tabBarImageNames: String) {
-        tabImageView.image = UIImage(named: tabBarImageNames)
+//    func databind(tabBarImageNames: String) {
+//        tabImageView.image = UIImage(named: tabBarImageNames)
+//    }
+    
+    func databind(index: Int, categoryTabSelected: Bool) {
+        if categoryTabSelected {
+            if index == 0 {
+                tabImageView.image = UIImage(named: "Frame1")
+                underLineView.backgroundColor = .systemBlue
+            } else {
+                tabImageView.image = UIImage(named: "Frame")
+                underLineView.backgroundColor = .clear
+            }
+        }else {
+            if index == 0 {
+                tabImageView.image = UIImage(named: "Frame1")
+                underLineView.backgroundColor = .clear
+            } else {
+                tabImageView.image = UIImage(named: "Frame")
+                underLineView.backgroundColor = .systemBlue
+            }
+        }
+
     }
 }
