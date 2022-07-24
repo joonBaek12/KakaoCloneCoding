@@ -24,12 +24,9 @@ final class NewCategoryCollectionViewCell: UICollectionViewCell {
         $0.font = .systemFont(ofSize: 14, weight: .medium)
     }
     
-    private let numberLabel = UILabel().then {
-        $0.text = "1/100"
-    }
     
     private let lineView = UIView().then {
-        $0.backgroundColor = .systemGray2
+        $0.backgroundColor = .systemGray6
     }
 
     //MARK: - Variables
@@ -39,6 +36,7 @@ final class NewCategoryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         layout()
+        config()
     }
     
     required init?(coder: NSCoder) {
@@ -56,9 +54,7 @@ extension NewCategoryCollectionViewCell {
         contentView.adds(
             [
                 categoryImageContainerView,
-                categoryImageView,
                 nameLabel,
-                numberLabel,
                 lineView
             ]
         )
@@ -66,8 +62,9 @@ extension NewCategoryCollectionViewCell {
         categoryImageContainerView.add(categoryImageView)
         
         categoryImageContainerView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(53)
+            $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().offset(26)
+            $0.width.height.equalTo(29)
         }
         
         categoryImageView.snp.makeConstraints {
@@ -75,21 +72,20 @@ extension NewCategoryCollectionViewCell {
         }
         
         nameLabel.snp.makeConstraints {
-            $0.leading.equalTo(self.categoryImageView).offset(22)
-        }
-        
-        numberLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().offset(45)
+            $0.leading.equalTo(self.categoryImageView.snp.trailing).offset(22)
         }
         
         lineView.snp.makeConstraints {
-            $0.centerY.equalTo(self.contentView.snp.bottom)
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(1)
         }
     }
     //MARK: - General Helpers
-    func databind(categoryList: String) {
-        nameLabel.text = categoryList
+    
+    private func config() {
+        categoryImageView.image = UIImage(named: "newCategBtn")
+        nameLabel.text = "새 카테고리"
     }
 }
